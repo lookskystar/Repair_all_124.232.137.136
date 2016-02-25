@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="common" extends="struts-default">
+		<!-- 
+	    <interceptors>
+			<interceptor name="exceptionInterceptor" class="com.repair.common.util.ExceptionInterceptor"></interceptor>
+			<interceptor-stack name="myDefaultStack">       
+	        	<interceptor-ref name="defaultStack"/>
+				<interceptor-ref name="exceptionInterceptor"/>
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="myDefaultStack"></default-interceptor-ref>
+		 -->
+		 <interceptors>
+		 	<interceptor name="encodingInterceptor" class="com.repair.common.util.EncodingInterceptor"></interceptor>
+		 	<interceptor-stack name="encodingStack">
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+				<interceptor-ref name="encodingInterceptor"></interceptor-ref>
+			</interceptor-stack>
+		 </interceptors>
+		 <!-- 全局拦截器栈 -->
+		<default-interceptor-ref name="encodingStack"></default-interceptor-ref>
+		<global-results>
+			<result name="jcgz_main_map">report!findAllJC.do?type=jcgz</result>
+		</global-results>
+	</package>
+</struts>

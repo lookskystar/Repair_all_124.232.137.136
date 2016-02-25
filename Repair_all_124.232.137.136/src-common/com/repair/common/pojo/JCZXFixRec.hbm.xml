@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.repair.common.pojo">
+	<class name="JCZXFixRec" table="JC_ZX_FIXREC">
+		<id name="id" column="ID" type="java.lang.Long">
+			<generator class="sequence">
+            	<param name="sequence">SEQ_JCZXFIXREC</param>
+            </generator>
+		</id>
+		<property name="jwdCode" column="JWDCODE"/>
+		<property name="jcType" column="JCTYPE"/>
+		<property name="jcNum" column="JCNUM"/>
+		<many-to-one name="dyPrecId" class="DatePlanPri">
+			<column name="DYPRECID"></column>
+		</many-to-one>
+		<property name="downPjBarCode" column="DOWNPJBARCODE"/>
+		<property name="downPjNum" column="DOWNPJNUM"/>
+		<property name="upPjBarCode" column="UPPJBARCODE"/>
+		<property name="upPjNum" column="UPPJNUM"/>
+		<many-to-one name="itemId" column="ITEMID" class="JCZXFixItem"/>
+		<property name="itemName" column="ITEMNAME"/>
+		<property name="fixSituation" column="FIXSITUATION"/>
+		<property name="unit" column="UNIT"/>
+		<property name="fixEmpId" column="FIXEMPID"/>
+		<property name="fixEmp" column="FIXEMP"/>
+		<property name="fixEmpTime" column="EMPAFFIRMTIME"/>
+		<property name="leadId" column="LEADID"/>
+		<property name="lead" column="LEAD"/>
+		<property name="ldAffirmTime" column="LDAFFIRMTIME"/>
+		<property name="teachId" column="TEACHID"/>
+		<property name="teachName" column="TEACHNAME"/>
+		<property name="teachAffiTime" column="TEALDAFFITIME"/>
+		<property name="qiId" column="QIID"/>
+		<property name="qi" column="QI"/>
+		<property name="qiAffiTime" column="QIAFFITIME"/>
+		<property name="commitLeadId" column="COMMITLEADID"/>
+		<property name="commitLead" column="COMMITLEAD"/>
+		<property name="comLdAffiTime" column="COMLDAFFITIME"/>
+		<property name="acceptErId" column="ACCEPTERID"/>
+		<property name="acceptEr" column="ACCEPTER"/>
+		<property name="acceAffiTime" column="ACCEAFFITIME"/>
+		<property name="recStas" column="RECSTAS"/>
+		<property name="itemType" column="ITEMTYPE"></property>
+		<property name="jhTime" column="JHTIME"></property>
+		<property name="bzId" column="BZID"></property>
+		<property name="nodeId" column="NODEID"></property>
+		<property name="duration" column="DURATION"></property>
+		
+		<property name="reptId" column="REPTID"></property>
+		<property name="rept" column="REPT"></property>
+		<property name="reptAffirmTime" column="REPTAFFIRMTIME"></property>
+		<property name="dealSituation" column="DEALSITUATION"></property>
+		
+				
+		<property name="posiName" column="POSINAME"></property>
+		<property name="firstUnitId" column="FIRSTUNITID"></property>
+		<property name="unitName" column="UNITNAME"></property>
+		<property name="itemCtrlLead" column="ITEMCTRLLEAD"/>
+		<property name="itemCtrlComld" column="ITEMCTRLCOMLD"/>
+		<property name="itemCtrlQi" column="ITEMCTRLQI"/>
+		<property name="itemCtrlTech" column="ITEMCTRLTECH"/>
+		<property name="itemCtrlAcce" column="ITEMCTRLACCE"/>
+		<property name="itemCtrlRept" column="ITEMCTRLREPT"/>
+	</class>
+</hibernate-mapping>

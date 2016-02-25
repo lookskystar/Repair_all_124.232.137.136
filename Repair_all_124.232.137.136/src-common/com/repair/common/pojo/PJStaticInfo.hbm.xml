@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.repair.common.pojo">
+    <class name="PJStaticInfo" table="PJ_STATICINFO">
+        <id name="pjsid" type="java.lang.Long">
+            <column name="PJSID" />
+            <generator class="increment" />
+        </id>
+        <property name="jwdCode" type="java.lang.String">
+            <column name="JWDCODE" length="20" not-null="true" />
+        </property>
+        <property name="areaId" type="java.lang.String">
+            <column name="AREAID" length="20" />
+        </property>
+        <property name="pjName" type="java.lang.String">
+            <column name="PJNAME" length="100" not-null="true" />
+        </property>
+        <property name="lowestStore" type="java.lang.Integer">
+            <column name="LOWESTSTORE" not-null="true" />
+        </property>
+        <property name="mostStore" type="java.lang.Integer">
+            <column name="MOSTSTORE" not-null="true" />
+        </property>
+        <property name="py" type="java.lang.String">
+            <column name="PY" length="50" />
+        </property>
+        <property name="jcType" type="java.lang.String">
+        	<column name="JCTYPE" length="20"></column>
+        </property>
+        <property name="visitRecord">
+        	<column name="VISITRECORD" default="0"></column>
+        </property>
+        
+     	<many-to-one name="parent" class="PJStaticInfo">
+     		<column name="PARENTID"></column>
+     	</many-to-one>
+     	<many-to-one name="pjFixFlowType" class="PJFixFlowType">
+     		<column name="flowTypeId"></column>
+     	</many-to-one>
+     	<many-to-one name="firstUnit" class="DictFirstUnit">
+            <column name="FIRSTUNITID" />
+        </many-to-one>   
+        <property name="amount" type="java.lang.Integer">
+            <column name="AMOUNT"/>
+        </property>
+        <property name="type" type="java.lang.Integer">
+            <column name="TYPE"/>
+        </property>
+        <property name="bzIds" type="java.lang.String">
+        	<column name="BZIDS"></column>
+        </property>
+    </class>
+</hibernate-mapping>

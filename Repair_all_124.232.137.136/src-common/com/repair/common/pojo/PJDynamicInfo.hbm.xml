@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.repair.common.pojo">
+	<!-- 2015-5-55，黄亮，修改，去掉class项中的schema="ADMIN"，原因，干扰查询数据库结果，本应该查询guest用户的该表，结果查询了admin用户的该表 -->
+    <class name="PJDynamicInfo" table="PJ_DYNAMICINFO">
+        <id name="pjdid" type="java.lang.Long">
+        	<column name="PJDID" />
+            <generator class="sequence">
+            	<param name="sequence">SEQ_PJDYNAMICINFO</param>
+            </generator>
+        </id>
+        <property name="pjName" type="java.lang.String">
+            <column name="PJNAME" length="100"  />
+        </property>
+        <property name="jwdCode" type="java.lang.String">
+            <column name="JWDCODE" length="20"  />
+        </property>
+        <property name="getOnNum"></property>
+        <property name="factoryNum" type="java.lang.String">
+            <column name="FACTORYNUM" length="50"  />
+        </property>
+        <property name="pjBarCode" type="java.lang.String">
+            <column name="PJBARCODE" length="100"  />
+        </property>
+		<property name="factory"></property>
+		<property name="outFacDate"></property>
+        <property name="storePosition" type="java.lang.Integer">
+            <column name="STOREPOSITION" precision="22" scale="0" />
+        </property>
+        <property name="pjStatus" type="java.lang.Integer">
+            <column name="PJSTATUS" length="10"  />
+        </property>
+        <property name="py" type="java.lang.String">
+            <column name="PY" length="50" />
+        </property>
+		<property name="fixFlowName"></property>
+        <!-- not-null="true" lazy="false" fetch="join" -->
+        <many-to-one name="pjStaticInfo" class="PJStaticInfo">
+            <column name="PJSID" />
+        </many-to-one>
+        <property name="pjNum" type="java.lang.String">
+            <column name="PJNUM" length="200"  />
+        </property>
+        <many-to-one name="handoverRecord" column="hrId"/>
+       <property name="comments" type="java.lang.String">
+            <column name="COMMENTS" length="200"  />
+        </property>
+    </class>
+</hibernate-mapping>

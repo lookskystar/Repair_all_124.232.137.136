@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.repair.common.pojo">
+	<class name="MainPlanDetail" table="MAINPLANDETAIL">
+		<id name="id" column="ID">
+			<generator class="sequence">
+            	<param name="sequence">SEQ_MAINPLANDETAIL</param>
+            </generator>
+		</id>
+		<many-to-one name="mainPlanId" class="MainPlan" column="MAINPLANID"/>
+		<property name="planTime" column="PLANTIME"/>
+		<property name="planWeek" column="PLANWEEK"/>
+		<property name="num" column="NUM"/>
+		<property name="jcType" column="JCTYPE"/>
+		<property name="jcNum" column="JCNUM"/>
+		<property name="xcxc" column="XCXC"/>
+		<property name="kilometre" column="KILOMETRE"/>
+		<property name="realKilometre" column="REALKILOMETRE"/>
+		<property name="kcArea" column="KCAREA"/>
+		<property name="comments" column="COMMENTS"/>
+		<property name="isCash" column="ISCASH"/>
+		<property name="cashReason" column="CASHREASON"></property>
+		<property name="rjhmId" column="RJHMID"></property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:context="http://www.springframework.org/schema/context"
+             xmlns:aop="http://www.springframework.org/schema/aop"
+             xmlns:tx="http://www.springframework.org/schema/tx"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+                     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                     http://www.springframework.org/schema/context
+                     http://www.springframework.org/schema/context/spring-context-3.0.xsd
+                     http://www.springframework.org/schema/aop
+                     http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+                     http://www.springframework.org/schema/tx
+                     http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+	<!-- 用户登录Action -->
+	<bean id="loginAction" class="com.repair.part.action.LoginAction" scope="prototype"></bean>
+	
+	<!-- 配件检修Action-->
+	<bean id="partFixAction" class="com.repair.part.action.PartFixAction" scope="prototype"></bean>
+	
+	<!-- 配件管理Action-->
+	<bean id="pjManageAction" class="com.repair.part.action.PJManageAction" scope="prototype"></bean>
+
+	
+	<!-- 配件检修相关操作Action 
+	<bean id="partServiceAction" class="com.repair.part.action.PartServiceAction" scope="prototype"></bean>
+	-->
+	
+	<!-- 配件管理Action 
+	<bean id="partManageAction" class="com.repair.part.action.PartManageAction" scope="prototype"></bean>
+	-->
+	
+	<!-- 操作用户相关信息的service -->
+	<!-- 
+	<bean id="userService" class="com.repair.part.service.impl.UserServiceImpl"></bean>
+	 -->
+	 
+	<!-- 操作配件检修的service  -->
+	<bean id="partFixService" class="com.repair.part.service.impl.PartFixServiceImpl"></bean>
+	
+    <!-- 操作配件管理的service  -->
+	<bean id="pjManageService" class="com.repair.part.service.impl.PJManageServiceImpl"></bean>
+	
+	<!-- 用户登录业务接口 -->
+	<!-- 
+	<bean id="usersPrivsDao" class="com.repair.part.dao.impl.UsersPrivsDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	 -->
+	 
+	<!-- 配件检修日计划业务接口 -->
+	<bean id="pjDatePlanDao" class="com.repair.part.dao.impl.PJDatePlanDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	
+	<!-- 操作静态配件的业务接口 -->
+	<bean id="pjStaticInfoDao" class="com.repair.part.dao.impl.PJStaticInfoDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<!-- 操作动态配件的业务接口 -->
+	<bean id="pjDynamicInfoDao" class="com.repair.part.dao.impl.PJDynamicInfoDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<!-- 操作配件检修记录的业务接口 -->
+	<bean id="pjFixRecordDao" class="com.repair.part.dao.impl.PJFixRecordDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<!-- 操作配件检修流程和流程类型业务接口 -->
+	<bean id="pjFixFlowDao" class="com.repair.part.dao.impl.PJFixFlowDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<!-- 操作配件管理业务接口 -->
+	<bean id="pjManageDao" class="com.repair.part.dao.impl.PJManageDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+</beans>

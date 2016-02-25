@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.repair.common.pojo">
+	<class name="YSJCItem" table="YSJC_ITEM">
+		<id name="itemId">
+			<generator class="native" />
+		</id>
+		<property name="classify" />
+		<property name="itemName" />
+		<property name="max" />
+		<property name="min" />
+		<property name="unit" />
+		<property name="orderNo" />
+		<property name="jcType" />
+		<property name="isCheck" />
+		<property name="proteam" />
+		<property name="isUse"></property>
+	</class>
+</hibernate-mapping>

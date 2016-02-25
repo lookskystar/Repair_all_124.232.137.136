@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="Repair_all_124.232.137.136">
+        <wb-resource deploy-path="/" source-path="/WebRoot"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/app-config"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src-common"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src-work"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src-plan"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src-experiment"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src-query"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src-admin"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src-part"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src-ts"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src-kq"/>
+        <property name="context-root" value="/min"/>
+        <property name="java-output-path" value="/Repair_all_124.232.137.136/WebRoot/WEB-INF/classes"/>
+    </wb-module>
+</project-modules>

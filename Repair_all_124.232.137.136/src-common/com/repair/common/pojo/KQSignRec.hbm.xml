@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.repair.common.pojo">
+	<class name="KQSignRec" table="KQ_SIGNREC">
+		<id name="signId" type="java.lang.Long">
+            <column name="ID" />
+            <generator class="sequence">
+            	<param name="sequence">SEQ_KQSIGNREC</param>
+            </generator>
+        </id>
+		<property name="proteamId" type="java.lang.Long">
+			<column name="PROTEAMID" />
+		</property>		
+		<property name="signtimeA" type="java.lang.String">
+			<column name="SIGN_TIME_A"></column>
+		</property>
+		<property name="signtimeB" type="java.lang.String">
+			<column name="SIGN_TIME_B"></column>
+		</property>
+		<property name="signtimeC" type="java.lang.String">
+			<column name="SIGN_TIME_C"></column>
+		</property>
+		<property name="signtimeD" type="java.lang.String">
+			<column name="SIGN_TIME_D"></column>
+		</property>
+		<property name="signFlag" type="java.lang.String">
+			<column name="SIGN_FLAG"></column>
+		</property>
+		<property name="attendance" type="java.lang.Double">
+			<column name="ATTENDANCE" />
+		</property>		
+		<property name="realAttendance" type="java.lang.Double">
+			<column name="REAL_ATTENDANCE"></column>
+		</property>
+		<property name="islate" type="java.lang.Integer">
+			<column name="IS_LATE" />
+		</property>
+		<property name="isgoearly" type="java.lang.Integer">
+			<column name="IS_GOEARLY" />
+		</property>
+		<property name="isabsenteeism" type="java.lang.Integer">
+			<column name="IS_ABSENTEEISM" />
+		</property>
+		<property name="isovertime" type="java.lang.Integer">
+			<column name="IS_OVERTIME" />
+		</property>
+		<property name="isresign" type="java.lang.Integer">
+			<column name="IS_RESIGN" />
+		</property>		
+		<property name="reSignTypeId" type="java.lang.Long">
+			<column name="RESIGN_TYPEID"></column>
+		</property>
+		<property name="gonghao" type="java.lang.String">
+			<column name="GONGHAO" />
+		</property>		
+		<property name="xm" type="java.lang.String">
+			<column name="XM"></column>
+		</property>
+		<property name="noworkBegintime" type="java.lang.String">
+			<column name="NOWORK_BEGINTIME"></column>
+		</property>
+		<property name="noworkEndtime" type="java.lang.String">
+			<column name="NOWORK_ENDTIME"></column>
+		</property>
+		<property name="operator" type="java.lang.String">
+			<column name="OPERATOR"></column>
+		</property>
+		<property name="operatorTime" type="java.lang.String">
+			<column name="OPERATOR_TIME"></column>
+		</property>
+		<property name="resignReason" type="java.lang.String">
+			<column name="RESIGN_REASON"></column>
+		</property>
+		<property name="day" type="java.lang.String">
+			<column name="DAY"></column>
+		</property>
+		<property name="signCount" type="java.lang.Integer">
+			<column name="SIGN_COUNT" />
+		</property>	
+		<property name="islateB" type="java.lang.Integer">
+			<column name="IS_LATE_B" />
+		</property>
+		<property name="isgoearlyB" type="java.lang.Integer">
+			<column name="IS_GOEARLY_B" />
+		</property>
+	</class>
+</hibernate-mapping>

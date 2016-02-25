@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.repair.common.pojo">
+	<class name="PresetRelateID" table="PRESET_RELATEID">
+		<id name="relateId" column="RELATEID" type="java.lang.Long">
+			<generator class="sequence">
+            	<param name="sequence">SEQ_PRESET_RELATEID</param>
+            </generator>
+		</id>
+		<many-to-one name="presetId" column="PROSETID" class="PresetDivision"/>
+		<many-to-one name="jcZXFixItemId" column="THIRDUNITID" class="JCZXFixItem"/>
+		<many-to-one name="fixitem"/>
+		<property name="thirds" column="THIRDS" type="java.lang.String"/>
+	</class>
+</hibernate-mapping>

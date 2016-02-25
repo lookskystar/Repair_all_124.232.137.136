@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.repair.common.pojo.MonPlanPri" table="MONPLAN_PRI">
+		<id name="monPlanId">
+			<generator class="native" />
+		</id>
+		<property name="jwdCode" />
+		<property name="areaId" />
+		<property name="planType" />
+		<property name="planTime" />
+		<many-to-one name="verifier" unique="true" />
+		<property name="verifyDate" />
+		<many-to-one name="fmtPeople" unique="true"/>
+		<property name="fmtDate" />
+		<property name="status" />
+		<property name="projectType"></property>
+	</class>
+</hibernate-mapping>

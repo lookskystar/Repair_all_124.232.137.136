@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.repair.common.pojo">
+	<class name="DictJcFixSeq" table="DICT_JCFIXSEQ">
+		<id name="fixId">
+			<generator class="native" />
+		</id>
+		<property name="fixValue" />
+		<property name="flowVal" />
+	</class>
+</hibernate-mapping>

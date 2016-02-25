@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="experiment" extends="common" namespace="/">
+	   <action name="experiment" class="experimentAction">
+			<result name="zx_experiment">experiment/experimentList.jsp</result>
+			<result name="zx_no_experiment">experiment/noExperiment.jsp</result>
+			
+			<result name="szsySignItem">/experiment/szsySignItem.jsp</result>
+			<result name="szsyLeadSignItem">/experiment/szsyLeadSignItem.jsp</result>
+			<result name="szsySignAllItem">/experiment/szsySignAllItem.jsp</result>
+			<result name="dlsySignItem">/experiment/dlsySignItem.jsp</result>
+			<result name="dlsyLeadSignItem">/experiment/dlsyLeadSignItem.jsp</result>
+			<result name="gdysySignItem">/experiment/gdysySignItem.jsp</result>
+			<result name="gdysyLeadSignItem">/experiment/gdysyLeadSignItem.jsp</result>
+			<result name="syxsySignItem">/experiment/syxsySignItem.jsp</result>
+			<result name="syxsyLeadSignItem">/experiment/syxsyLeadSignItem.jsp</result>
+			<result name="rrSyxsySignItem">/experiment/rrsyxsySignItem.jsp</result>
+			<result name="rrSyxsyLeadSignItem">/experiment/rrsyxsyLeadSignItem.jsp</result>
+		</action>
+		
+		<action name="checkSign" class="checkSignAction">
+			<result name="checkSignInput">/experiment/jc_check_sign.jsp</result>
+			<result name="checkRecInput">/experiment/jc_check_rec.jsp</result>
+			<result name="signDialogInput">/experiment/sign_dialog.jsp</result>
+			<result name="nrCheckInput">/experiment/jcnr_check_rec.jsp</result>
+			<result name="nrYsylCheckInput">/experiment/ysyl_check_item.jsp</result>
+			<result name="nrHyylCheckInput">/experiment/hyyl_check_item.jsp</result>
+			<result name="nrRyylCheckInput">/experiment/ryyl_check_item.jsp</result>
+			<result name="nrDdjyCheckInput">/experiment/ddjy_check_item.jsp</result>
+			<result name="nrBhzzCheckInput">/experiment/bhzz_check_item.jsp</result>
+			<result name="checkSignDialogInput">/experiment/check_sign_dialog.jsp</result>
+		</action>
+		<action name="checkDealJc" class="checkDealJcAction">
+		    <result name="checkDealJcInput">/experiment/jc_check_deal.jsp</result>
+		    <result name="roleSignInput">/experiment/role_sign_dialog.jsp</result>
+		    <result name="re_report_sign">/page/reportwork/re_report_sign.jsp</result>
+		</action>
+		<action name="zeroCheck" class="zeroCheckAction">
+		    <result name="zeroCheckInput">/experiment/zero_check.jsp</result>
+		    <result name="zeroSignDialog">/experiment/zero_sign_dialog.jsp</result>
+		    <result name="zeroSignMsg">/experiment/zero_sign_msg.jsp</result>
+		    <result name="jcRollOutInput">/experiment/jc_roll_out.jsp</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.repair.common.pojo">
+	<class name="TsAtRecord" table="TS_AT_RECORD">
+		<id name="id" type="java.lang.Integer">
+			<column name="ID" />
+			<generator class="increment" />
+		</id>
+		<property name="jcType" type="java.lang.String">
+			<column name="JCTYPE" />
+		</property>
+		<property name="jcNum" type="java.lang.String">
+			<column name="JCNUM"></column>
+		</property>
+		<property name="xc" type="java.lang.String">
+			<column name="XC"></column>
+		</property>
+		<property name="jcFixNum" type="java.lang.String">
+			<column name="JCFIXNUM"></column>
+		</property>
+		<property name="unitName" type="java.lang.String">
+			<column name="UNITNAME"></column>
+		</property>
+		<property name="unitCount" type="java.lang.String">
+			<column name="UNITCOUNT"></column>
+		</property>
+		<property name="unitNum" type="java.lang.String">
+			<column name="UNITNUM"></column>
+		</property>
+		<property name="atTime" type="java.lang.String">
+			<column name="ATTIME"></column>
+		</property>
+		<property name="fixTime" type="java.lang.String">
+			<column name="FIXTIME"></column>
+		</property>
+		<property name="atWorker" type="java.lang.String">
+			<column name="ATWORKER"></column>
+		</property>
+		<property name="firstWorker" type="java.lang.String">
+			<column name="FIRSTWORKER"></column>
+		</property>
+		<property name="secondWorker" type="java.lang.String">
+			<column name="SECONDWORKER"></column>
+		</property>
+		<property name="status" type="java.lang.String">
+			<column name="STATUS"></column>
+		</property>
+		<property name="tsResult" type="java.lang.String">
+			<column name="TSRESULT"></column>
+		</property>
+		<property name="tsDeal" type="java.lang.String">
+			<column name="TSDEAL"></column>
+		</property>
+		<property name="tsMethod" type="java.lang.String">
+			<column name="TSMETHOD"></column>
+		</property>
+		<property name="tsTime" type="java.lang.String">
+			<column name="TSTIME"></column>
+		</property>
+	</class>
+</hibernate-mapping>

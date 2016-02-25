@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.repair.common.pojo">
+	<class name="JCQZItems" table="JC_QZ_ITEMS">
+		<id name="id">
+			<column name="ID"></column>
+			<generator class="native" />
+		</id>
+		<property name="jwdCode" column="JWDCODE"></property>
+		<property name="firstUnitid" column="FIRSTUNITID"></property>
+		<property name="unitNum" column="UNITNUM"></property>
+		<property name="unitName" column="UNITNAME"></property>
+		<property name="xh" column="XH"></property>
+		<property name="itemName" column="ITEMNAME"></property>
+		<property name="techStanderd" column="TECHSTANDARD"></property>
+		<property name="fillDefaVal" column="FILLDEFAVAL"></property>
+		<property name="min" column="MIN1"></property>
+		<property name="max" column="MAX1"></property>
+		<property name="xiuci" column="XIUCI"></property>
+		<property name="jcsType" column="JCSTYPE"></property>
+		<many-to-one name="banzuId" column="BZID" class="DictProTeam"></many-to-one>
+	</class>
+</hibernate-mapping>

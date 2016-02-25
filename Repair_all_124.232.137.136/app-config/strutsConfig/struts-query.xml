@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="query" extends="common" namespace="/">
+	  	<action name="report" class="reportAction">
+	  		<result name="success">/report/maps.jsp</result>
+	  		<result name="infodetail">/report/jcinfodetail.jsp</result>
+	  		<result name="select">/report/select.jsp</result>
+	  		<result name="lead_select">/report/lead_select.jsp</result>
+	  		<result name="lead_success">/report/lead_jc.jsp</result>
+	  		<result name="kc_success">/report/kc_maps.jsp</result>
+	  		<result name="jcgz_success">/report/jcgz_maps.jsp</result>
+	  		<result name="jcgz_gdt">/report/jcgz_gdt.jsp</result>
+	  		<result name="work_success">/report/work_maps.jsp</result>
+	  		<result name="work_infodetail">/report/work_jcinfodetail.jsp</result>
+	  	</action>
+	  	<action name="query" class="queryAction">
+	  		<result name="success">/report/list.jsp</result>
+	  		<result name="lx">/report/2.jsp</result>
+	  		<result name="xf">/report/selUnit.jsp</result>
+	  		<result name="zx">/report/selUnit2.jsp</result>
+	  		<result name="zxpj">/report/selUnitPJ.jsp</result>
+	  		<result name="pjnum">/report/pj_num.jsp</result>
+	  		<result name="pjnum_ts">/report/pj_num_ts.jsp</result>
+	  		<result name="xf_tpl">/report/selUnit_template.jsp</result>
+	  		<result name="qz">/report/1.jsp</result>
+	  		<result name="jtView">/report/3.jsp</result>
+	  		<result name="jungong">/report/jungong.jsp</result>
+	  		<result name="ysjc">/report/ysjc.jsp</result>
+	  		<result name="dl">/report/dl.jsp</result>
+	  		<result name="nr">/report/nr.jsp</result>
+	  		<result name="info_jc">/report/info/jc.jsp</result>
+	  		<result name="info_pre_all">/report/info/pre_all.jsp</result>
+	  		<result name="info_unit">/report/info/selUnit.jsp</result>
+	  		<result name="info_bz">/report/info/selBZ.jsp</result>
+	  		<result name="info_jc_lx">/report/info/jc_lx.jsp</result>
+	  		<result name="info_jc_qz">/report/info/jc_qz.jsp</result>
+	  		<result name="info_unit_qz">/report/info/selUnit_qz.jsp</result>
+	  		<result name="info_bz_qz">/report/info/selBZ_qz.jsp</result>
+	  		<result name="info_bz_lx">/report/info/selBZ_lx.jsp</result>
+	  		<result name="history">/report/history.jsp</result>
+	  		<result name="count">/report/count.jsp</result>
+	  		<result name="shuizu">/report/experiment/shuizu.jsp</result>
+	  		<result name="shiyunxing">/report/experiment/shiyunxing.jsp</result>
+	  		<result name="dfshiyunxing">/report/experiment/dfshiyunxing.jsp</result>
+	  		<result name="ssshiyunxing">/report/experiment/ssshiyunxing.jsp</result>
+	  		<result name="gaodiya">/report/experiment/gaodiya.jsp</result>
+	  		<result name="dinglun">/report/experiment/dinglun.jsp</result>
+	  		<result name="jcsy">/report/jcsy.jsp</result>
+	  		<result name="zx_info_bz">/report/info/zx_selBZ.jsp</result>
+	  		<result name="zx_info_unit">/report/info/zx_selUnit.jsp</result>
+	  		<result name="zx_info_jc">/report/info/zx_jc.jsp</result>
+	  		<result name="pj">/report/pj.jsp</result>
+	  		<result name="zxpjdetail">/report/selUnitPJDetail.jsp</result>
+	  		<result name="zxpjdetail_new">/report/selUnitPJDetailNew.jsp</result>
+	  		<result name="jc_all">/report/jc_all.jsp</result>
+	  		<result name="jc_pj">/report/jc_pj.jsp</result>
+	  		<result name="jc_ts">/report/jc_ts.jsp</result>
+	  		<result name="loginOut" type="redirect">/login.jsp</result>
+	  		<result name="listjcnum">/report/list_jcnum.jsp</result>
+	  		<result name="xx_jc_pj">/report/xx_jc_pj.jsp</result>
+	  		<result name="other_jc_pj">/report/other_jc_pj.jsp</result>
+	  		<result name="listjcnums">/report/list_jcnums.jsp</result>
+	  		<result name="lead_main" type="redirect">report/lead_main.jsp</result>
+	  		<result name="listjcnumsbyarea">/report/list_jcnumsarea.jsp</result>
+	  		<result name="listjcnumstype">/report/list_jcnumstype.jsp</result>
+	  		<result name="leftWorkRecord">/report/leftworkrecord.jsp</result>
+	  		<result name="leftZxWorkRecord">/report/leftzxworkrecord.jsp</result>
+	  		<result name="groupLeaderReport">/report/groupleader_report.jsp</result>
+	  		<result name="groupLeaderReportDetail">/report/groupleader_report_detail.jsp</result>
+	  	</action>
+	  	<action name="teach" class="teachManageAction">
+	  		<result name="tempFix">/tech/tempFix.jsp</result>
+	  		<result name="superFix">/tech/superFix.jsp</result>
+	  		<result name="tempRecord">/tech/tempRecord.jsp</result>
+	  		<result name="zeroAnalyse">/tech/zeroAnalyse.jsp</result>
+	  		<result name="zeroRecord">/tech/zeroRecord.jsp</result>
+	  		<result name="fixIndexInput">/tech/fixindexinput.jsp</result>
+	  		<result name="fixIndex">/tech/fixindex.jsp</result>
+	  		<result name="fixInfoRecord">/tech/fixInfoRecord.jsp</result>
+	  		<result name="preInfoRecord">/tech/preInfoRecord.jsp</result>
+	  		<result name="runDepart">/tech/runDepart.jsp</result>
+	  		<result name="runDict">/tech/runDict.jsp</result>
+	  		<result name="runFixInfoRecord">/tech/runFixInfoRecord.jsp</result>
+	  		<result name="trainFaultManage">/tech/trainFaultManage.jsp</result>
+	  		<result name="trainFaultList">/tech/trainFaultList.jsp</result>
+	  		<result name="newTrainFault">/tech/newTrainFault.jsp</result>
+	  		<result name="trainFaultInfo">/tech/trainFaultInfo.jsp</result>
+	  		<result name="superFixRecord">/tech/superFixRecord.jsp</result>
+	  	</action>
+	  	
+	  	<action name="document" class="documentManageAction">
+	  		<result name="listDocumentType">/plant/document/list_documenttype.jsp</result>
+	  		<result name="listDocument">/plant/document/list_document.jsp</result>
+	  		<result name="documentTypeAddInput">/plant/document/documenttype_add.jsp</result>
+	  		<result name="documentTypeEditInput">/plant/document/documenttype_edit.jsp</result>
+	  		<result name="documentAddInput">/plant/document/document_add.jsp</result>
+	  		<result name="documentOfType">/plant/document/list_documentof.jsp</result>
+	  		<result name="listDocumentTypeQuery">/plant/document/list_documenttype_query.jsp</result>
+	  		<result name="listDocumentQuery">/plant/document/list_document_query.jsp</result>
+	  	</action>
+	  	
+	  	<action name="question" class="questionManageAction">
+	  		<result name="listQuestionType">/plant/question/list_questiontype.jsp</result>
+	  		<result name="listQuestion">/plant/question/list_question.jsp</result>
+	  		<result name="questionTypeAddInput">/plant/question/questiontype_add.jsp</result>
+	  		<result name="questionTypeEditInput">/plant/question/questiontype_edit.jsp</result>
+	  		<result name="questionAddInput">/plant/question/question_add.jsp</result>
+	  		<result name="questionEditInput">/plant/question/question_edit.jsp</result>
+	  		<result name="questionOfType">/plant/question/list_questionof.jsp</result>
+	  	</action>
+	  	
+	  	<action name="examin" class="examinManageAction">
+	  		<result name="listExaminQuestionType">/plant/examin/list_examinquestiontype.jsp</result>
+	  		<result name="listExaminQuestion">/plant/examin/list_examinquestion.jsp</result>
+	  		<result name="examinQuestionTypeAddInput">/plant/examin/examinquestiontype_add.jsp</result>
+	  		<result name="examinQuestionTypeEditInput">/plant/examin/examinquestiontype_edit.jsp</result>
+	  		<result name="examinQuestionAddInput">/plant/examin/examinquestion_add.jsp</result>
+	  		<result name="examinQuestionEditInput">/plant/examin/examinquestion_edit.jsp</result>
+	  		<result name="examinQuestionOfType">/plant/examin/list_examinquestionof.jsp</result>
+	  		<result name="listExaminRecType">/plant/examin/list_examinrectype.jsp</result>
+	  		<result name="listExaminRec">/plant/examin/list_examinrec.jsp</result>
+	  	</action>
+	  	<action name="timecount" class="timeCountAction">
+	  		<result name="success">/plant/timecount.jsp</result>
+	  		<result name="zx">/plant/zxtimecount.jsp</result>
+	  		<result name="itemtime">/plant/itemtime.jsp</result>
+	  		<result name="zxitemtime">/plant/zxitemtime.jsp</result>
+	  		<result name="repcount">/plant/repcount.jsp</result>
+	  		<result name="report_count">/plant/report_count.jsp</result>
+	  		<result name="repitem">/plant/repquery.jsp</result>
+	  		<result name="report_item">/plant/report_item.jsp</result>
+	  		<result name="updateRepScoreInput">/plant/update_score.jsp</result>
+	  	</action>
+	  	<action name="excelAction" class="excelAction">
+	  	    <result name="success" type="stream">  
+                <param name="contentType">application/vnd.ms-excel</param>  
+                <param name="contentDisposition">attachment;fileName="${fileName}"</param>  
+                <param name="inputName">downLoadExcelFile</param>
+            </result>  
+	  	</action>
+	  	<action name="uploadExcel" class="uploadExcel">
+	  	    <result name="uploadPlan">planManage!findPlanDetail.do</result>
+	  	    <result name="uploadReward">rewardAction!rewardInfoInput.do</result>
+	  	    <result name="uploadWorkTimeCount">proteamEntryAction!proteamEntryInput.do</result>
+	  	</action>
+	</package>
+</struts>

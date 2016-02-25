@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.repair.common.pojo">
+    <class name="PJDatePlan" table="PJ_DATEPLAN">
+        <id name="planId" type="java.lang.Long">
+            <generator class="increment" />
+        </id>
+        <property name="maker"></property>
+        <property name="makeDate"></property>
+        <property name="pjName"></property>
+        <property name="amount"></property>
+        <property name="acceptDate"></property>
+        <property name="payDate"></property>
+        <property name="planStartWorkDate"></property>
+        <property name="planEndWorkDate"></property>
+        <property name="status">
+        	<column name="STATUS" default="0"></column>
+        </property>
+        
+        <many-to-one name="pjStaticInfo" class="PJStaticInfo" lazy="false">
+        	<column name="PJSID"></column>
+        </many-to-one>
+    </class>
+</hibernate-mapping>
+
+
+

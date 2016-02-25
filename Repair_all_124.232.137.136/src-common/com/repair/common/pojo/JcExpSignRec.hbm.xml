@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.repair.common.pojo">
+    <class name="JcExpSignRec" table="JC_EXP_SIGN_REC">
+        <id name="recId" type="java.lang.Long">
+            <column name="RECID" />
+            <generator class="increment"/>
+        </id>
+        <property name="jwdCode" type="java.lang.String">
+            <column name="JWDCODE" />
+        </property>
+        <property name="jcnum"></property>
+        <many-to-one name="datePlan" class="DatePlanPri">
+            <column name="PLANID"></column>
+        </many-to-one>
+        <property name="xc" type="java.lang.String">
+            <column name="XC"/>
+        </property>
+        <many-to-one name="experiment" class="JcExperimentItem">
+            <column name="EXPID"></column>
+        </many-to-one>
+        <property name="itemName" type="java.lang.String">
+            <column name="ITEMNAME"/>
+        </property>
+        <property name="leadId" type="java.lang.Integer">
+            <column name="LEADID"></column>
+        </property>
+        <property name="leader" type="java.lang.String">
+            <column name="LEADER"/>
+        </property>
+        <property name="ldAffirmTime" type="java.lang.String">
+            <column name="LDAFFIRMTIME" />
+        </property>
+        <property name="teachId" type="java.lang.Integer">
+            <column name="TEACHID"></column>
+        </property>
+        <property name="teachName" type="java.lang.String">
+            <column name="TEACHNAME"/>
+        </property>
+        <property name="teachFiTime" type="java.lang.String">
+            <column name="TEACHFITIME"/>
+        </property>
+        <property name="qiId" type="java.lang.Integer">
+            <column name="QIID"></column>
+        </property>
+        <property name="qi" type="java.lang.String">
+            <column name="QI" />
+        </property>
+        <property name="qiAffiTime" type="java.lang.String">
+            <column name="QIAFFITIME" />
+        </property>
+        <property name="commitLeadId" type="java.lang.Integer">
+            <column name="COMMITLEADID"></column>
+        </property>
+        <property name="commitLead" type="java.lang.String">
+            <column name="COMMITLEAD"/>
+        </property>
+        <property name="comLdAffiTime" type="java.lang.String">
+            <column name="COMLDAFFITIME"/>
+        </property>
+        <property name="accepterId" type="java.lang.Integer">
+            <column name="ACCEPTERID"></column>
+        </property>
+        <property name="accepter" type="java.lang.String">
+            <column name="ACCEPTER"/>
+        </property>
+        <property name="acceAffiTime" type="java.lang.String">
+            <column name="ACCEAFFITIME"/>
+        </property>
+        <property name="recStas" type="java.lang.Short">
+            <column name="RECSTAS"/>
+        </property>
+    </class>
+</hibernate-mapping>

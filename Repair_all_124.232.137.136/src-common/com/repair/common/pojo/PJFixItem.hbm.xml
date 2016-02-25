@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.repair.common.pojo">
+    <class name="PJFixItem" table="PJ_FIXITEM">
+        <id name="pjItemId" type="java.lang.Long">
+            <column name="PJITEMID" />
+            <generator class="increment" />
+        </id>
+        
+        <many-to-one name="pjFixFlow" class="PJFixFlow" not-null="true">
+            <column name="NODEID" />
+        </many-to-one>
+        <many-to-one name="pjStaticInfo" class="PJStaticInfo" not-null="true">
+            <column name="PJSID" />
+        </many-to-one>
+        <many-to-one name="team" class="DictProTeam">
+        	<column name="PROTEAMID"></column>
+        </many-to-one>
+        
+        <property name="childPJId"></property>
+        <property name="childPJName"></property>
+        <property name="pjName" type="java.lang.String">
+            <column name="PJNAME" length="200" not-null="true" />
+        </property>
+         <property name="posiName" type="java.lang.String">
+            <column name="POSINAME" length="200" not-null="true" />
+        </property>
+        <property name="fixItem" type="java.lang.String">
+            <column name="FIXITEM" length="500" not-null="true" />
+        </property>
+        <property name="itemOrder" type="java.lang.Integer">
+            <column name="ITEMORDER" precision="22" scale="0" />
+        </property>
+        <property name="techStandard" type="java.lang.String">
+            <column name="TECHSTANDARD" length="300" />
+        </property>
+        <property name="itemFillDefault" type="java.lang.String">
+            <column name="ITEMFILLDEFA" length="50" />
+        </property>
+        <property name="minVal" type="java.lang.Double">
+            <column name="MINVAL" precision="8" scale="4" />
+        </property>
+        <property name="maxVal" type="java.lang.Double">
+            <column name="MAXVAL" precision="8" scale="4" />
+        </property>
+        <property name="queryshwstas" type="java.lang.Integer">
+            <column name="QUERYSHWSTAS" not-null="true" />
+        </property>
+        <property name="itempy" type="java.lang.String">
+            <column name="ITEMPY" length="50" />
+        </property>
+        <property name="itemctrllead" type="java.lang.Integer">
+            <column name="ITEMCTRLLEAD" not-null="true" />
+        </property>
+        <property name="itemctrlcomld" type="java.lang.Integer">
+            <column name="ITEMCTRLCOMLD" not-null="true" />
+        </property>
+        <property name="itemctrlqi" type="java.lang.Integer">
+            <column name="ITEMCTRLQI" not-null="true" />
+        </property>
+        <property name="itemctrltech" type="java.lang.Integer">
+            <column name="ITEMCTRLTECH" not-null="true" />
+        </property>
+        <property name="itemctrlacce" type="java.lang.Integer">
+            <column name="ITEMCTRLACCE" not-null="true" />
+        </property>
+        <property name="unit" type="java.lang.String">
+            <column name="UNIT" length="50" not-null="true" />
+        </property>
+        <property name="amount" type="java.lang.Integer">
+            <column name="AMOUNT" not-null="true" />
+        </property>
+       
+        <property name="itemctrlrept" type="java.lang.Integer">
+            <column name="ItEMCTRLREPT" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.repair.common.pojo">
+	<class name="OilAssayPriRecorder" table="OIL_ASSAY_PRIRECORDER">
+		<id name="recPriId">
+			<generator class="native" />
+		</id>
+		<property name="jwdCode"/>
+		<property name="areaId" />
+		<many-to-one name="dpId" column="wekPrecId" class="DatePlanPri"/>
+		<property name="sentsamPeo" />
+		<property name="receiptPeo" />
+		<property name="recesamTime" />
+		<property name="finTime" />
+		<property name="detecteStatus" />
+		<property name="jcsTypeVal" />
+		<property name="jcNum" />
+		<property name="dealAdvice" />
+		<property name="quasituation" />
+	</class>
+</hibernate-mapping>

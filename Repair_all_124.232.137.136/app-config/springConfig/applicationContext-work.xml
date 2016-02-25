@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:context="http://www.springframework.org/schema/context"
+             xmlns:aop="http://www.springframework.org/schema/aop"
+             xmlns:tx="http://www.springframework.org/schema/tx"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+                     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                     http://www.springframework.org/schema/context
+                     http://www.springframework.org/schema/context/spring-context-3.0.xsd
+                     http://www.springframework.org/schema/aop
+                     http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+                     http://www.springframework.org/schema/tx
+                     http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+	<!-- 用户 -->
+	<bean id="usersPrivsDao" class="com.repair.work.dao.impl.UsersPrivsDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="usersPrivsService" class="com.repair.work.service.impl.UsersPrivsServiceImpl"></bean>
+	<!-- 登陆Action -->
+	<bean id="loginAction" class="com.repair.work.action.LoginAction" scope="prototype"></bean>
+	
+	<!-- 预设分类 -->
+	<bean id="presetDivisionDao" class="com.repair.work.dao.impl.PresetDivisionDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="presetDivisionService" class="com.repair.work.service.impl.PresetDivisionServiceImpl"></bean>
+	
+	<!-- 签字 -->
+	<bean id="signWorkDao" class="com.repair.work.dao.impl.SignWorkDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="signWorkService" class="com.repair.work.service.impl.SignWorkServiceImpl"></bean>
+	
+	<!-- 检修作业 -->
+	<bean id="workDao" class="com.repair.work.dao.impl.WorkDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="workService" class="com.repair.work.service.impl.WorkServiceImpl"></bean>
+	
+	<!-- 秋整、春鉴 -->
+	<bean id="jcqzFixDao" class="com.repair.work.dao.impl.JCQZFixDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="jcqzFixService" class="com.repair.work.service.impl.JCQZFixServiceImpl"></bean>
+	
+	<!-- 报活 -->
+	<bean id="jtPreDictDao" class="com.repair.work.dao.impl.JtPreDictDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="dictUnitDao" class="com.repair.work.dao.impl.DictUnitDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="jtPreDictService" class="com.repair.work.service.impl.JtPreDictServiceImpl"></bean>
+	
+	<!-- 交车试验 -->
+	<bean id="ysjcRecDao" class="com.repair.work.dao.impl.YSJCDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="ysjcRecService" class="com.repair.work.service.impl.YSJCRecServiceImpl"></bean>
+	
+	<!-- 油水化验 -->
+	<bean id="oilAssayDao" class="com.repair.work.dao.impl.OilAssayDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="oilAssayService" class="com.repair.work.service.impl.OilAssayServiceImpl"></bean>
+		
+	<bean id="presetDivisionAction" class="com.repair.work.action.PresetDivisionAction" scope="prototype"></bean>
+	<bean id="signWorkAction" class="com.repair.work.action.SignWorkAction" scope="prototype"></bean>
+	<bean id="workAction" class="com.repair.work.action.WorkAction" scope="prototype"></bean>
+	<bean id="reportWorkManageAction" class="com.repair.work.action.ReportWorkManageAction" scope="prototype"></bean>
+	<bean id="oilAssayAction" class="com.repair.work.action.OilAssayAction" scope="prototype"></bean>
+
+
+		<!--(新加) 秋整-->
+	<bean id="qzAction" class="com.repair.work.action.QZAction" scope="prototype"></bean>
+	<bean id="jcQZRangeDao" class="com.repair.work.dao.impl.JCQZRangeDaoImpl" scope="prototype">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="zeroScoreDao" class="com.repair.work.dao.impl.ZeroScoreDaoImpl" scope="prototype">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="qzDao" class="com.repair.work.dao.impl.QZDaoImpl" scope="prototype">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+</beans>

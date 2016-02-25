@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.repair.common.pojo">
+	<class name="JCZXFixItem" table="JC_ZX_FIXITEM">
+		<id name="id">
+		    <column name="ID"></column>
+			<generator class="native" />
+		</id>
+		<property name="jwdCode" column="JWDCODE"/>
+		<many-to-one name="nodeId" column="NODEID" class="JCFixflow"/>
+		<property name="itemName" column="ITEMNAME"/>
+		<property name="itemSn" column="ITEMSN"/>
+		<many-to-one name="parentId" column="PARENTID" class="JCZXFixItem"/>
+		<property name="timeNum" column="TIMENUM"/>
+		<property name="techStandard" column="TECHSTANDARD"/>
+		<property name="fillDefaval" column="FILLDEFAVAL"/>
+		<property name="min" column="MIN "/>
+		<property name="max" column="MAX"/>
+		<property name="unit" column="UNIT"/>
+		<property name="itemPy" column="ITEMPY"/>
+		<property name="itemCtrlLead" column="ITEMCTRLLEAD"/>
+		<property name="itemCtrlComld" column="ITEMCTRLCOMLD"/>
+		<property name="itemCtrlQi" column="ITEMCTRLQI"/>
+		<property name="itemCtrlTech" column="ITEMCTRLTECH"/>
+		<property name="itemCtrlAcce" column="ITEMCTRLACCE"/>
+		<property name="jcsType" column="JCSTYPE"/>
+		<property name="xcxc" column="XCXC"/>
+		<property name="jc" column="JC"/>
+		<property name="proTeam" column="PROTEAM"/>
+		<many-to-one name="bzId" column="BZID" class="DictProTeam"/>
+		<many-to-one name="ysId" column="YSID" class="PresetDivision"/>
+		<property name="itemRelation" column="ITEMRELATION"></property>
+		<property name="unitName" column="UNITNAME"></property>
+		<property name="posiName" column="POSINAME"></property>
+		<property name="firstUnitId" column="FIRSTUNITID"></property>
+		<property name="duration" column="DURATION"></property>
+		<property name="amount" column="AMOUNT"></property>
+		<property name="stdPJId" column="STDPJID" type="java.lang.Long"></property>
+		<property name="itemCtrlRept" column="ITEMCTRLREPT"></property>
+	</class>
+</hibernate-mapping>

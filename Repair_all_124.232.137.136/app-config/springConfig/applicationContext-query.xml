@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:context="http://www.springframework.org/schema/context"
+             xmlns:aop="http://www.springframework.org/schema/aop"
+             xmlns:tx="http://www.springframework.org/schema/tx"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+                     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                     http://www.springframework.org/schema/context
+                     http://www.springframework.org/schema/context/spring-context-3.0.xsd
+                     http://www.springframework.org/schema/aop
+                     http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+                     http://www.springframework.org/schema/tx
+                     http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+	<!-- 用户 -->
+	<bean id="queryDao" class="com.repair.query.dao.impl.DictQueryDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="fittingDao" class="com.repair.query.dao.impl.FittingDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="teachManageDao" class="com.repair.query.dao.impl.TeachManageDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="plantManageDao" class="com.repair.query.dao.impl.PlantManageDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="jcFixRecDao" class="com.repair.query.dao.impl.JcFixRecDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="queryService" class="com.repair.query.service.impl.QueryServiceImpl"></bean>
+	<bean id="teachManageService" class="com.repair.query.service.impl.TeachManageServiceImpl"></bean>
+	<bean id="fittingService" class="com.repair.query.service.impl.FittingServiceImpl"></bean>
+	<bean id="plantManageService" class="com.repair.query.service.impl.PlantManageServiceImpl"></bean>
+	<bean id="aaa" class="com.repair.query.service.impl.JcFixRecServiceImpl"></bean>
+	
+	<bean id="reportAction" class="com.repair.query.action.ReportAction" scope="prototype"></bean>
+	<bean id="queryAction" class="com.repair.query.action.QueryAction" scope="prototype"></bean>
+	<bean id="teachManageAction" class="com.repair.query.action.TeachManageAction" scope="prototype"></bean>
+	<bean id="documentManageAction" class="com.repair.query.action.DocumentManageAction" scope="prototype"></bean>
+	<bean id="questionManageAction" class="com.repair.query.action.QuestionManageAction" scope="prototype"></bean>
+	<bean id="examinManageAction" class="com.repair.query.action.ExaminQuestionManageAction" scope="prototype"></bean>
+	<bean id="timeCountAction" class="com.repair.query.action.JcFixRecAction" scope="prototype"></bean>
+	<bean id="excelAction" class="com.repair.query.action.ExcelAction" scope="prototype"></bean>
+	<bean id="uploadExcel" class="com.repair.query.action.UploadExcelAction" scope="prototype"></bean>
+</beans>

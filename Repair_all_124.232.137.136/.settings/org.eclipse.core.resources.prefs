@@ -1,0 +1,19 @@
+#Tue Aug 18 12:02:23 CST 2015
+eclipse.preferences.version=1
+encoding//WebRoot/admin/js/admin.js=UTF-8
+encoding//WebRoot/experiment/js/experiment.js=UTF-8
+encoding//WebRoot/fix=UTF-8
+encoding//WebRoot/js=UTF-8
+encoding//WebRoot/js/operateDate.js=GBK
+encoding//WebRoot/login=UTF-8
+encoding//WebRoot/login/skin1/style.css=gb2312
+encoding//WebRoot/predict=UTF-8
+encoding//WebRoot/report/\u80A1\u9053\u56FE\u4FEE\u6539\u6587\u4EF6/readme.txt=GBK
+encoding//src-admin/com/repair/admin/action/FixItemAction.java=UTF-8
+encoding//src-admin/com/repair/admin/action/JcManageAction.java=UTF-8
+encoding//src-admin/com/repair/admin/action/RolesAction.java=UTF-8
+encoding//src-admin/com/repair/admin/dao/RolesDao.java=UTF-8
+encoding//src-admin/com/repair/admin/service/FixItemService.java=UTF-8
+encoding//src-admin/com/repair/admin/service/RolesService.java=UTF-8
+encoding//src-common/com/repair/common/pojo/PJFixItem.java=UTF-8
+encoding/<project>=UTF-8

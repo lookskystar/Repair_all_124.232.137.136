@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="admin" extends="common" namespace="/">
+		<action name="userRolesAction" class="userRolesAction">
+			<result name="userindex">admin/user/userindex.jsp</result>
+			<result name="users">admin/user/users.jsp</result>
+			<result name="roles">admin/user/roles.jsp</result>
+			<result name="adduser">admin/user/adduser.jsp</result>
+			<result name="edituser">admin/user/edituser.jsp</result>
+			<result name="userinfolist">admin/user/userinfolist.jsp</result>
+			<result name="adddictproteam">admin/user/adddictproteam.jsp</result>
+			<result name="editdictproteam">admin/user/editdictproteam.jsp</result>
+			<result name="updateuserbz">admin/user/updateuserbz.jsp</result>
+		</action>
+		<action name="jcManageAction" class="jcManageAction">
+			<result name="jcmanage">admin/jcmanage/jcmanage.jsp</result>
+			<result name="jcadd">admin/jcmanage/jcadd.jsp</result>
+			<result name="jc">admin/jcmanage/jc.jsp</result>
+			<result name="addJcStype">admin/jcmanage/addJcStype.jsp</result>
+			<result name="jcedite">admin/jcmanage/jcedite.jsp</result>
+			<result name="repairjc">admin/jcmanage/repairjc.jsp</result>
+			
+		</action>
+		<action name="listByJcType" class="jcManageAction" method="listByJcType"></action>
+		<action name="listByJcTypeAndJcNum" class="jcManageAction" method="listByJcTypeAndJcNum"></action>
+		<action name="jcDelete" class="jcManageAction" method="jcDelete"></action>
+		<action name="jcInsert" class="jcManageAction" method="insert"></action>
+		
+		<action name="downloadAction" class="downloadAction">
+			<result name="download">admin/download.jsp</result>
+			<result name="success" type="stream">
+            <param name="contentType">application/octet-stream;charset=ISO8859-1</param>
+            <param name="inputName">inputStream</param>
+            <param name="contentDisposition">attachment;filename="${fileName}"</param>
+            <param name="bufferSize">4096</param>
+            </result>	
+		</action>
+		
+		<action name="rolesAction" class="rolesAction">
+		   <result name="roles">admin/user/roles.jsp</result>
+		   <result name="editrole">admin/user/changeroles.jsp</result>
+		   <result name="toPowerInput">admin/user/topower.jsp</result>
+		</action>
+		
+		<action name="fixItemAction" class="fixItemAction">
+		    <result name="itemList">admin/item/itemlist.jsp</result>
+		    <result name="itemInfo">admin/item/iteminfo.jsp</result>
+		    <result name="addItem">admin/item/additeminfo.jsp</result>
+		    <result name="editItem">admin/item/edititeminfo.jsp</result>
+		    <result name="zxFixItemList">admin/item/zxitemlist.jsp</result>
+		    <result name="zxitemInfo">admin/item/zxiteminfo.jsp</result>
+		    <result name="addZxItem">admin/item/addZxItem.jsp</result>
+		    <result name="editzxItem">admin/item/editzxItem.jsp</result>
+		</action>
+		
+		<action name="excel" class="excelAdminAction">
+			<result name="success" type="stream"> 
+                <param name="contentType">application/vnd.ms-excel</param>  
+                <param name="inputName">excelStream</param>
+                <param name="contentDisposition">attachment;filename="${fileName}.xls"</param>
+               <param name="bufferSize">1024</param>
+            </result> 
+		</action>
+		
+		<action name="system" class="systemAction">
+			<result name="system">admin/system.jsp</result>
+			<result name="reload" type="redirect">system!setInput.do</result>
+		</action>
+		
+		<action name="reportTemplate" class="reportTemplateAction">
+			<result name="template">admin/template/template.jsp</result>
+			<result name="fixitem">admin/template/fixitem.jsp</result>
+		</action>
+		
+		<action name="attendanceAction" class="attendanceAction">
+			<result name="proteamUsersList">attendance/list_proteam_users.jsp</result>
+			<result name="proteamAttendance">attendance/list_proteam_attendance.jsp</result>
+			<result name="attendanceEdit">attendance/edit_user_attendance.jsp</result>
+			<result name="proteamUsers">attendance/list_proteam.jsp</result>
+			<result name="dateList">attendance/list_proteam_check.jsp</result>
+			
+		</action>
+	</package>
+</struts>

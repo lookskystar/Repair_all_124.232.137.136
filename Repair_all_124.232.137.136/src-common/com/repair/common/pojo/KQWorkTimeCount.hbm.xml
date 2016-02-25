@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.repair.common.pojo">
+	<class name="KQWorkTimeCount" table="KQ_WORK_TIMECOUNT">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="name" type="java.lang.String">
+			<column name="NAME" />
+		</property>		
+		<property name="gonghao" type="java.lang.String">
+			<column name="GONGHAO"></column>
+		</property>
+		<many-to-one name="proteam" class="DictProTeam">
+        	<column name="PROTEAMID"></column>
+        </many-to-one>
+		<property name="time" type="java.lang.String">
+			<column name="TIME"></column>
+		</property>
+		<property name="workType" type="java.lang.String">
+			<column name="WORK_TYPE" />
+		</property>		
+		<property name="workContent" type="java.lang.String">
+			<column name="WORK_CONTENT"></column>
+		</property>
+		<property name="workScore" type="java.lang.String">
+			<column name="WORK_SCORE" />
+		</property>		
+		<property name="workNote" type="java.lang.String">
+			<column name="WORK_NOTE"></column>
+		</property>
+		<property name="status" type="java.lang.Integer">
+			<column name="STATUS"></column>
+		</property>
+	</class>
+</hibernate-mapping>

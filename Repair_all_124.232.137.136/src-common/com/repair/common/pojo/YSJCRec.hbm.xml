@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.repair.common.pojo">
+	<class name="YSJCRec" table="YSJC_REC">
+		<id name="recId">
+			<column name="RECID" />
+            <generator class="sequence">
+            	<param name="sequence">SEQ_YSJCREC</param>
+            </generator>
+		</id>
+		<many-to-one name="datePlanPri" class="DatePlanPri" column="RJHMID"></many-to-one>
+		<many-to-one name="item" class="YSJCItem" column="ITEMID"></many-to-one>
+		<property name="classify"></property>
+		<property name="orderNo"></property>
+		<property name="fixSituation" />
+		<property name="fixemp" />
+		<property name="fixEmpTime" />
+		<property name="tech" />
+		<property name="techAffiTime" />
+		<property name="accept" />
+		<property name="acceptAffiTime" />
+		<property name="commAffiTime"></property>
+		<property name="commitLead"></property>
+		<property name="itemName"></property>
+		<property name="unit"></property>
+		<property name="proteam"></property>
+	</class>
+</hibernate-mapping>

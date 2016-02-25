@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.repair.common.pojo">
+	<class name="DocumentType" table="DOCUMENT_TYPE">
+		<id name="id" column="ID">
+			<generator class="native" />
+		</id>
+		<property name="name" column="NAME" type="string"/>
+		<property name="status" column="STATUS" type="integer"/>
+		<property name="modelType" column="MODELTYPE" type="string"/>
+		<many-to-one name="parentType" class="DocumentType" column="PARENTTYPE"/>
+		<many-to-one name="childType" class="DocumentType" column="CHILDTYPE"/>
+	</class>
+</hibernate-mapping>

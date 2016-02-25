@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.repair.common.pojo">
+	<class name="JGPlanContent" table="JG_PLAN_CONTENT">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="jgContent" column="JG_CONTENT"/>
+		<property name="planNum" column="PLAN_NUM"/>
+		<property name="jcType" column="JC_TYPE"/>
+	</class>
+</hibernate-mapping>

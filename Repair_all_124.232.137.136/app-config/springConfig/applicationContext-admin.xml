@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:context="http://www.springframework.org/schema/context"
+             xmlns:aop="http://www.springframework.org/schema/aop"
+             xmlns:tx="http://www.springframework.org/schema/tx"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+                     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                     http://www.springframework.org/schema/context
+                     http://www.springframework.org/schema/context/spring-context-3.0.xsd
+                     http://www.springframework.org/schema/aop
+                     http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+                     http://www.springframework.org/schema/tx
+                     http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+	
+	<!-- 用户角色管理 -->
+	<bean id="userRolesDao" class="com.repair.admin.dao.impl.UserRolesDaoImpl">
+    	<property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean id="userRolesService" class="com.repair.admin.service.impl.UserRolesServiceImpl"></bean>
+	<bean id="userRolesAction" class="com.repair.admin.action.UserRolesAction" scope="prototype"></bean>
+	
+	<!-- 角色管理 -->
+	<bean id="rolesDao" class="com.repair.admin.dao.impl.RolesDaoImpl">
+    	<property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean id="rolesService" class="com.repair.admin.service.impl.RolesServiceImpl"></bean>
+	<bean id="rolesAction" class="com.repair.admin.action.RolesAction" scope="prototype"></bean>
+	
+	<!-- 机车管理 -->
+	<!-- 机车管理 -->
+	<bean id="jcManageDao" class="com.repair.admin.dao.impl.JcManageDaoImpl">
+    	<property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean id="jcManageService" class="com.repair.admin.service.impl.JcManageServiceImpl">
+		<property name="jcManageDao">
+			<ref bean="jcManageDao"/>
+		</property>    
+    </bean>
+	<bean id="jcManageAction" class="com.repair.admin.action.JcManageAction" scope="prototype">
+		<property name="jcManageService">
+			<ref bean="jcManageService"/>
+		</property>
+	</bean>
+	<!-- 下载与帮助-->
+	<bean id="downloadAction" class="com.repair.admin.action.DownloadAction" scope="prototype"></bean>
+	<!-- 检修项目 -->
+	<bean id="fixItemDao" class="com.repair.admin.dao.impl.FixItemDaoImpl">
+    	<property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean id="fixItemService" class="com.repair.admin.service.impl.FixItemServiceImpl"></bean>
+	<bean id="fixItemAction" class="com.repair.admin.action.FixItemAction" scope="prototype"></bean>
+	<!-- excel导入导出 -->
+	<bean id="excelAdminAction" class="com.repair.admin.action.ExcelAction" scope="prototype"></bean>
+	<!-- 系统环境设置 -->
+	<bean id="systemDao" class="com.repair.admin.dao.impl.SystemDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="systemService" class="com.repair.admin.service.impl.SystemServiceImpl"></bean>
+	<bean id="systemAction" class="com.repair.admin.action.SystemAction" scope="prototype"></bean>
+	<!-- 报表模板 -->
+	<bean id="reportTemplateAction" class="com.repair.admin.action.ReportTemplateAction" scope="prototype"></bean>
+	<bean id="reportTemplateDao" class="com.repair.admin.dao.impl.ReportTemplateDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="reportTemplateService" class="com.repair.admin.service.impl.ReportTemplateServiceImpl"></bean>
+	<!-- 考勤管理 -->
+	<bean id="attendanceAction" class="com.repair.admin.action.AttendanceAction" scope="prototype"></bean>
+	<bean id="attendanceDao" class="com.repair.admin.dao.impl.AttendacneDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="attendanceService" class="com.repair.admin.service.impl.AttendanceServiceImpl"></bean>
+</beans>

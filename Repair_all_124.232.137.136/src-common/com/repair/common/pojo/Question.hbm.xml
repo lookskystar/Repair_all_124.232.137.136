@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.repair.common.pojo">
+	<class name="Question" table="QUESTION">
+		<id name="id" column="ID">
+			<generator class="native" />
+		</id>
+		<many-to-one name="type" class="QuestionType" column="TYPE"/>
+		<property name="question" column="QUESTION" type="string"/>
+		<property name="answer" column="ANSWER" type="string"/>
+		<many-to-one name="uploader" class="UsersPrivs" column="UPLOADER"/>
+		<property name="uploadtime" column="UPLOADTIME" type="string"/>
+		<many-to-one name="examiner" class="UsersPrivs" column="EXAMINER"/>
+		<property name="examintime" column="EXAMINTIME" type="string"/>
+		<property name="status" column="STATUS" type="string"/>
+		<property name="imgPath" column="IMGPATH" type="string"/>
+	</class>
+</hibernate-mapping>

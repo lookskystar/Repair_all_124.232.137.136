@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.repair.common.pojo">
+	<class name="DictJcStype" table="DICT_JCSTYPE">
+		<id name="jcNumId">
+			<generator class="native" />
+		</id>
+		<many-to-one name="jcTypeId"/>
+		<property name="jcStypeValue" />
+	</class>
+</hibernate-mapping>

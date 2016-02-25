@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="kq" extends="common" namespace="/">
+		<action name="rewardAction" class="rewardAction">
+			<result name="rewardInfo">/kq/reward_info.jsp</result>
+			<result name="addRewardInfo">/kq/add_reward_info.jsp</result>
+			<result name="updateRewardInfo">/kq/update_reward_info.jsp</result>
+			<result name="completeRewardInfo">/kq/complete_reward_info.jsp</result>
+			<result name="queryReward">/kq/query_reward_info.jsp</result>
+			<result name="noticeInfo">/kq/notice_info.jsp</result>
+			<result name="addNoticeInfo">/kq/add_notice_info.jsp</result>
+			<result name="updateNoticeInfo">/kq/update_notice_info.jsp</result>
+			<result name="detailNoticeInfo">/kq/detail_notice_info.jsp</result>
+			<result name="upload_reward_excel">/kq/upload_reward_excel.jsp</result>
+			<result name="queryDayReport">/kq/query_day_report.jsp</result>
+			<result name="queryMonthReport">/kq/query_month_report.jsp</result>
+			<result name="queryMonthDetail">/kq/query_month_detail.jsp</result>
+			<result name="workSet">/kq/work_set.jsp</result>
+			<result name="addWorkSet">/kq/add_work_set.jsp</result>
+			<result name="queryDayReportNew">/kq/query_day_report_new.jsp</result>
+			<result name="queryMonthReportNew">/kq/query_month_report_new.jsp</result>
+			<result name="queryMonthDetailNew">/kq/query_month_detail_new.jsp</result>
+		</action>
+
+		<action name="signAction" class="signAction">
+		   <result name="resign">kq/query/resign.jsp</result>
+		   <result name="query_kqday">kq/query/queryKQDay.jsp</result>
+		   <result name="addresign">kq/query/addresign.jsp</result>
+		   <result name="noworkEdit">kq/query/noworkPlan.jsp</result>
+		   <result name="editResign">kq/query/editresign.jsp</result>
+		   <result name="signrecInfo">kq/query/signrecInfo.jsp</result>
+		   <result name="query_kqmonth">kq/query/queryKQMonth.jsp</result>
+		   <result name="query_kqmonthbyxm">kq/query/queryKQMonthByXm.jsp</result>
+		   <result name="resume">kq/query/resume.jsp</result>
+		   <result name="sign">kq/signInput.jsp</result>
+		   <result name="carryOver">kq/carryOverInput.jsp</result>
+		</action>
+		
+		<action name="maintainAction" class="maintainAction">
+			<result name="equip">/kq/equip.jsp</result>
+			<result name="addEquip">/kq/add_equip.jsp</result>
+			<result name="rule">/kq/rule.jsp</result>
+			<result name="proteams">/kq/proteams.jsp</result>
+			<result name="addRule">/kq/add_rule.jsp</result>
+			<result name="holiday">/kq/holiday.jsp</result>
+			<result name="addHoliday">/kq/add_holiday.jsp</result>
+			<result name="addSinHoliday">/kq/add_SinHoliday.jsp</result>
+			<result name="editHoliday">/kq/edit_holiday.jsp</result>
+			<result name="editKqequip">/kq/edit_equip.jsp</result>
+			<result name="editRule">/kq/edit_rule.jsp</result>
+			<result name="workTimeItem">/kq/workTimeItem.jsp</result>
+			<result name="addWorkTimeItem">/kq/add_workTimeItem.jsp</result>
+			<result name="editWorkTimeItem">/kq/edit_workTimeItem.jsp</result>
+		</action>
+		
+		<action name="proteamEntryAction" class="proteamEntryAction">
+			<result name="proteamEntryInput">/kq/proteam_entry.jsp</result>
+			<result name="upload_workTimeCount_excel">/kq/upload_workTimeCount_excel.jsp</result>
+			<result name="workDivisionInput">/kq/work_division.jsp</result>
+		</action>
+		
+		<action name="anomalouAction" class="anomalouAction">
+			<result name="createMSArea2DCharts">/kq/anomalous.jsp</result>
+		</action>
+	</package>
+</struts>

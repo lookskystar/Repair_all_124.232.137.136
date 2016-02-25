@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.repair.common.pojo">
+    <class name="PJPredict" table="PJ_PREDICT">
+        <id name="predictId" type="java.lang.Long">
+            <column name="PREDICTID" not-null="true" />
+            <generator class="increment" />
+        </id>
+        
+        <property name="bzId" type="java.lang.Long">
+        	<column name="BZID" not-null="true"></column>
+        </property>
+        <property name="bzName" type="java.lang.String">
+        	<column name="BZNAME" not-null="true"></column>
+        </property>
+        <property name="description" type="java.lang.String">
+        	<column name="DESCRIPTION"></column>
+        </property>
+        <property name="makerId" type="java.lang.Long">
+        	<column name="MAKERID" not-null="true"></column>
+        </property>
+        <property name="maker" type="java.lang.String">
+        	<column name="MAKER" not-null="true"></column>
+        </property>
+        <property name="makeDate" type="java.util.Date">
+        	<column name="MAKEDATE" not-null="true"></column>
+        </property>
+        <property name="approverId" type="java.lang.Long">
+        	<column name="APPROVERID"></column>
+        </property>
+        <property name="approver" type="java.lang.String">
+        	<column name="APPROVER"></column>
+        </property>
+        <property name="approveDate" type="java.util.Date">
+        	<column name="APPROVEDATE"></column>
+        </property>
+        <property name="needApprove" type="java.lang.Integer">
+        	<column name="NEEDAPPROVE" not-null="true" default="0"></column>
+        </property>
+        <property name="pjFixRecId" type="java.lang.Long">
+        	<column name="PJFIXRECID" not-null="true"></column>
+        </property>
+          <property name="fixsituation" type="java.lang.String">
+            <column name="FIXSITUATION" length="30" />
+        </property>
+        <property name="accepttime" type="java.util.Date">
+        	<column name="ACCEPTTIME"></column>
+        </property>
+        <property name="fixempid" type="java.lang.Long">
+            <column name="FIXEMPID" length="20" />
+        </property>
+        <property name="fixemp" type="java.lang.String">
+            <column name="FIXEMP" length="20"/>
+        </property>
+        <property name="empaffirmtime" type="java.util.Date">
+            <column name="EMPAFFIRMTIME" length="7" />
+        </property>
+         <property name="leadid" type="java.lang.Long">
+            <column name="LEADID" length="20" />
+        </property>
+        <property name="lead" type="java.lang.String">
+            <column name="LEAD" length="20" />
+        </property>
+        <property name="ldaffirmtime" type="java.util.Date">
+            <column name="LDAFFIRMTIME" length="7"/>
+        </property>
+        <property name="commitleadid" type="java.lang.Long">
+            <column name="COMMITLEADID" length="20"/>
+        </property>
+        <property name="commitlead" type="java.lang.String">
+            <column name="COMMITLEAD" length="20" />
+        </property>
+        <property name="comldaffitime" type="java.util.Date">
+            <column name="COMLDAFFITIME" length="7" />
+        </property>
+        <property name="techId"></property>
+        <property name="techName"></property>
+        <property name="techTime"></property>
+        <property name="qiid" type="java.lang.Long">
+            <column name="QIID" length="20" />
+        </property>
+        <property name="qi" type="java.lang.String">
+            <column name="QI" length="20" />
+        </property>
+        <property name="qiaffitime" type="java.util.Date">
+            <column name="QIAFFITIME" length="7" />
+        </property>
+         <property name="accepterid" type="java.lang.Long">
+            <column name="ACCEPTERID" length="20" />
+        </property>
+        <property name="accepter" type="java.lang.String">
+            <column name="ACCEPTER" length="20"/>
+        </property>
+        <property name="acceaffitime" type="java.util.Date">
+            <column name="ACCEAFFITIME" length="7" />
+        </property>
+        <property name="status" type="java.lang.Integer">
+        	<column name="STATUS" not-null="true" default="0"></column>
+        </property>
+        
+        <!-- define relation many-to-one -->
+        <many-to-one name="pjDynamicInfo" class="PJDynamicInfo" lazy="false">
+            <column name="PJDID" not-null="true" />
+        </many-to-one>
+        <many-to-one name="pjFixRecord" class="PJFixRecord" lazy="false">
+            <column name="PJRECID"  not-null="true" />
+        </many-to-one>
+
+       
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.repair.common.pojo">
+	<class name="JCCurriculum" table="JC_CURRICULUM">
+		<id name="jccurId">
+			<column name="JCCURID"></column>
+			<generator class="increment"></generator>
+		</id>
+		<property name="jcId" type="string">
+			<column name="JCID"></column>
+		</property>
+		<property name="jcType" type="string">
+			<column name="JCTYPE"></column>
+		</property>
+		<property name="jcNum" type="string">
+			<column name="JCNUM"></column>
+		</property>
+		<property name="jcOwner" type="string">
+			<column name="JCOWNER"></column>
+		</property>
+		<property name="jcUser" type="string">
+			<column name="JCUSER"></column>
+		</property>
+		<property name="jcStas" type="integer">
+			<column name="JCSTAS"></column>
+		</property>
+		<property name="elment" type="string">
+			<column name="ELEMENT"></column>
+		</property>
+		<property name="madeTime" type="java.util.Date">
+			<column name="MADETIME"></column>
+		</property>
+		<property name="offeredTime" type="java.util.Date">
+			<column name="OFFEREDTIME"></column>
+		</property>
+		<property name="orrerEntity" type="string">
+			<column name="ORRERENTITY"></column>
+		</property>
+		<property name="alterOfferEntity" type="string">
+			<column name="ALTEROFFERENTITY"></column>
+		</property>
+		<property name="transTime" type="java.util.Date">
+			<column name="TRANSTIME"></column>
+		</property>
+		<property name="madeFrom" type="string">
+			<column name="MADEFROM"></column>
+		</property>
+		<property name="transOrder" type="string">
+			<column name="TRANSORDER"></column>
+		</property>
+		<property name="areaCode" type="string">
+			<column name="AREACODE"></column>
+		</property>
+		<property name="rollerrep" type="integer">
+			<column name="ROLLERREP"></column>
+		</property>
+		<property name="airbus" type="integer">
+			<column name="AIRBUS"></column>
+		</property>
+		<property name="freight" type="integer">
+			<column name="FREIGHT"></column>
+		</property>
+		<property name="trainPower" type="string">
+			<column name="TRAINPOWER"></column>
+		</property>
+		<property name="doublePipeWind" type="string">
+			<column name="DOUBLEPIPEWIND"></column>
+		</property>
+		<property name="endDevice" type="string">
+			<column name="ENDDEVICE"></column>
+		</property>
+		<property name="speciTrans" type="string">
+			<column name="SPECITRANS"></column>
+		</property>
+		<property name="upHump" type="string">
+			<column name="UPHUMP"></column>
+		</property>
+		<property name="jcInter" type="string">
+			<column name="JCINTER"></column>
+		</property>
+		<property name="alterTime" type="string">
+			<column name="ALTERTIME"></column>
+		</property>
+		<property name="isued" type="integer">
+			<column name="ISUSED"></column>
+		</property>
+		<property name="isVary" type="integer">
+			<column name="ISVARY"></column>
+		</property>
+	</class>
+
+</hibernate-mapping>

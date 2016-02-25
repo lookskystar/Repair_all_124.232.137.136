@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="plan" extends="common" namespace="/">
+		<action name="planManage" class="planManageAction">
+			<result name="monthplanmake">/page/plan/monthplanmake.jsp</result>
+			<result name="monthplanmakeinput">/page/plan/monplanoperate.jsp</result>
+			<result name="modifymonplanrecorderinput">/page/plan/monplanrecordermodify.jsp</result>
+			<result name="modifyweekplanrecorderinput">/page/plan/weekplanrecordermodify.jsp</result>
+			<result name="monthplanaudit">/page/plan/monthplanaudit.jsp</result>
+			<result name="weekplanmake">/page/plan/weekplanmake.jsp</result>
+			<result name="weekplanmakeinput">/page/plan/weekplanoperate.jsp</result>
+			<result name="dailyplanmake">/page/plan/dailyplanmake.jsp</result>
+			<result name="adddailyplaninput">/page/plan/dailyplanoperate.jsp</result>
+			<result name="findjccurriculumbyweekplan">/page/plan/jccurriculum.jsp</result>
+			<result name="modifydailyplaninput">/page/plan/dailyplanrecordermodify.jsp</result>
+			<result name="addoverhaulcontentinput">/page/plan/overhaulcontent.jsp</result>
+			<result name="jcgz_dailyplanmake">/page/plan/jcgz_dailyplanmake.jsp</result>
+			<result name="jcgz_addoverhaulcontentinput">/page/plan/jcgz_overhaulcontent.jsp</result>
+			<result name="monthPlanList">/page/plan/monthplanlist.jsp</result>
+			<result name="weekPlanList">/page/plan/weekplanlist.jsp</result>
+			<result name="adddailyplanofbatchinput">/page/plan/dailyplanoperateofbatch.jsp</result>
+			<result name="jgList">/page/plan/jgList.jsp</result>
+			<result name="listJc">/page/plan/jginfo.jsp</result>
+			<result name="jgAddItem">/page/plan/jg_add_item.jsp</result>
+			<result name="addJcInput">/page/plan/jg_add_jc.jsp</result>	
+			<result name="jgEdite">/page/plan/jg.jsp</result>
+			<result name="jgEditRedirect" type="redirect">planManage!jgEditeInput.do</result>			
+			<result name="jgitemList">/page/plan/jg_edite_item.jsp</result>
+			<result name="jgAddItem">/page/plan/jg_add_item.jsp</result>	
+			<result name="mainPlanEdit">/page/plan/edit_main_plan.jsp</result>	
+			<result name="planDetail">/page/plan/detail_main_plan.jsp</result>	
+			<result name="queryMainPlan">/page/plan/query_main_plan.jsp</result>
+			<result name="cashMainPlan">/page/plan/cash_main_plan.jsp</result>
+			<result name="cashDetail">/page/plan/cash_plan_detail.jsp</result>
+			<result name="existMainPlan">/page/plan/exist_main_plan.jsp</result>
+			<result name="upload_plan_excel">/page/plan/upload_plan_excel.jsp</result>
+			<result name="jgAddItem">/page/plan/jg_add_item.jsp</result>	
+			<result name="xiuDetailPlanInput">/page/plan/xiudetail_main_plan.jsp</result>			
+			<result name="jgAddItem">/page/plan/jg_add_item.jsp</result>
+			<result name="findweekplan">/page/plan/jcweekplan.jsp</result>	
+		</action>
+		<action name="pdiFroemanManage" class="pdiFroemanManageAction">
+			<result name="finddateplanbysign">/page/reexamination/dailyplansignpdifroeman.jsp</result>
+			<result name="dispatchinginput">/page/reexamination/dispatching.jsp</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,30 @@
+1、秋整、春鉴项目表  JC_QZ_ITEMS
+2、秋整、春鉴记录表  JC_QZ_FIXREC
+	添加  JC_QZ_FIXREC ITEMTYPE 0：检查 1：检测
+
+
+3、报活：添加字段 关联日计划主表ID  DATEPLANPRI
+         添加 卡控标识字段 0/1   4个  ITEMCTRLCOMLD   ITEMCTRQI  ITEMCTRLTECH  ITEMCTRLACCE
+         添加 检修人签字确认 DEALFIXEMP
+
+4、添加数据： 技术科项目（检测项目、卡控只有验收签字，检修人为技术科） 
+              小辅修项目 轮对、轮缘厚度   踏面磨耗
+              中修项目 组装上车
+
+5、日计划、月计划、周计划 添加
+         //项目类型  0：小辅修 1:中修
+	private Integer projectType;         PROJECTTYPE
+
+6、检修记录表添加字段   TECH  TECHAFFITIME   VARCHAR2(20)
+
+
+把jc_signature中的jcrecid改为dateplanId
+把DLJCJYZB中的recmid改为dpid；
+把SIGNEDFORFINISH中的recmid改为dpid；
+把ZERO_CHECk表中的recmid改为dpid;
+
+DatePlanPri中的planstatus为3表示车转出
+在SIGNEDFORFINISH表中增加字段type；0:强制交车 1：正常交车
+将NrJcJyzb中的recmid改为dpId
+在NrJcJyzb表中添加字段gzId,zjId,ysId;
+在dljcjymxb中添加字段status签认状态 0：未签认完全 1：签认完全

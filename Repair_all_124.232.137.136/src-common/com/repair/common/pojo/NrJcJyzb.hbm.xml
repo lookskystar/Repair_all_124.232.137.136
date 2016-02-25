@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.repair.common.pojo">
+	<class name="NrJcJyzb" table="NRJCJYZB">
+		<id name="jyzId">
+			<generator class="native" />
+		</id>
+		<property name="dpId" />
+		<property name="jclx" />
+		<property name="jch" />
+		<property name="xcxc" />
+		<property name="jcsj" />
+		<property name="sjqcsj" />
+		<property name="ts" />
+		<property name="ysyl1" />
+		<property name="ysyl2" />
+		<property name="ysyl3" />
+		<property name="ysyl4" />
+		<property name="ysyl5" />
+		<property name="ysyl6" />
+		<property name="ysyl7" />
+		<property name="ysyl8" />
+		<property name="ysyl9" />
+		<property name="ysyl10" />
+		<property name="ysyl11" />
+		<property name="ysyl12" />
+		<property name="ysyl13" />
+		<property name="ysyl14" />
+		<property name="ysyl15" />
+		<property name="ysyl16" />
+		<property name="hyylzs1" />
+		<property name="hyylzs2" />
+		<property name="hyylys1" />
+		<property name="hyylys2" />
+		<property name="hyylck1" />
+		<property name="hyylck2" />
+		<property name="hyylcq1" />
+		<property name="hyylcq2" />
+		<property name="hyylch1" />
+		<property name="hyylch2" />
+		<property name="hyylqz1" />
+		<property name="hyylqz2" />
+		<property name="hyylhz1" />
+		<property name="hyylhz2" />
+		<property name="hyyles1" />
+		<property name="hyyles2" />
+		<property name="ryylys1" />
+		<property name="ryylys2" />
+		<property name="ryyljxj1" />
+		<property name="ryyljxj2" />
+		<property name="ryyles1" />
+		<property name="ryyles2" />
+		<property name="ddjylc" />
+		<property name="ddjyz" />
+		<property name="ddjyk" />
+		<property name="ddjyzh" />
+		<property name="ddjyzdk" />
+		<property name="bhzzgy" />
+		<property name="bhzzcs" />
+		<property name="bhzzjx" />
+		<property name="bhzzgf" />
+		<property name="bhzzudk" />
+		<property name="fixEmp" />
+		<property name="zjqrTime" />
+		<property name="ysqrTime" />
+		<many-to-one name="gzId" class="UsersPrivs"/>
+		<many-to-one name="zjId" class="UsersPrivs"/>
+		<many-to-one name="ysId" class="UsersPrivs"/>
+	</class>
+</hibernate-mapping>

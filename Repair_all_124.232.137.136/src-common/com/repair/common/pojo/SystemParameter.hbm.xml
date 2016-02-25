@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.repair.common.pojo.SystemParameter" table="SYSTEM_PARAMETER">
+        <id name="id" type="integer">
+            <column name="ID" />
+            <generator class="increment" />
+        </id>
+        <property name="parameterName" type="java.lang.String">
+            <column name="PARAMETER_NAME"/>
+        </property>
+        <property name="parameterValue" type="java.lang.String">
+            <column name="PARAMETER_VALUE"/>
+        </property>
+        <property name="remark" type="java.lang.String">
+            <column name="REMARK"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.repair.common.pojo">
+	<class name="OilAssayDetailRecorer" table="OIL_ASSAY_DETAILRECORER">
+		<id name="recDetailId">
+			<generator class="sequence">
+            	<param name="sequence">SEQ_OIL_DETAIL_RECORDER_ID</param>
+            </generator>
+		</id>
+		<many-to-one name="recPriId"/>
+		<many-to-one name="subItemId"/>
+		<property name="subItemTitle" />
+		<property name="receiptPeo" />
+		<property name="finTime" />
+		<property name="realdeteVal" />
+		<property name="quaGrade" />
+	</class>
+</hibernate-mapping>

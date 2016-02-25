@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.repair.common.pojo">
+	<class name="JtPreDict" table="JT_PREDICT">
+		<id name="preDictId" column="PREDICTID">
+			<generator class="sequence">
+				<param name="sequence">SEQ_JT_PREDICT</param>
+			</generator>
+		</id>
+		<property name="jwdCode" column="JWDCODE"/>
+		<property name="repDate" column="REPDATE"/>
+		<property name="jcType" column="JCTYPE"/>
+		<property name="jcNum" column="JCNUM"/>
+		<many-to-one name="thirdUnitId" column="THIRDUNITID"/>
+		<property name="repPosi" column="REPPOSI"/>
+		<property name="repsituation" column="REPSITUATION"/>
+		<property name="failNum" column="FAILNUM"/>
+		<property name="failNote" column="FAILNOTE"/>
+		<property name="repempNo" column="REPEMPNO"/>
+		<property name="repemp" column="REPEMP"/>
+		<property name="repTime" column="REPTIME"/>
+		<property name="verifier" column="VERYFIER"/>
+		<property name="verifyTime" column="VERIFYTIME"/>
+		<property name="receiptPeo" column="RECEIPTPEO"/>
+		<property name="receTime" column="RECETIME"/>
+		<property name="fixEmp" column="FIXEMP"/>
+		<property name="fixEmpId" column="FIXEMPID"/>
+		<property name="dealFixEmp" column="DEALFIXEMP"></property>
+		<property name="dealSituation" column="DEALSITUATION"/>
+		<property name="fixEndTime" column="FIXENDTIME"/>
+		<property name="lead" column="LEAD"/>
+		<property name="ldAffirmTime" column="LDAFFIRMTIME"/>
+		<property name="commitLd" column="COMMITLD"/>
+		<property name="comLdAffiTime" column="COMLDAFFITIME"/>
+		<property name="qi" column="QI"/>
+		<property name="qiAffiTime" column="QIAFFITIME"/>
+		<property name="accepter" column="ACCEPTER"/>
+		<property name="acceTime" column="ACCETIME"/>
+		<property name="technician" column="TECHNICIAN"/>
+		<property name="techAffiTime" column="TECHAFFITIME"/>
+		<property name="affirmGrade" column="AFFIRMGRADE"/>
+		<property name="type" column="TYPE"/>
+		<property name="zeroKiloRecId" column="ZEROKILORECID"/>
+		<property name="recStas" column="RECSTAS"/>
+		<property name="imgUrl" column="IMGURL"/>
+		<many-to-one name="proTeamId" column="PROTEAMID"/>
+		<property name="itemCtrlComLd" column="ITEMCTRLCOMLD"></property>
+		<property name="itemCtrlQI" column="ITEMCTRQI"></property>
+		<property name="itemCtrlTech" column="ITEMCTRLTECH"></property>
+		<property name="itemCtrlAcce" column="ITEMCTRLACCE"></property>
+		<many-to-one name="datePlanPri" column="DATEPLANPRI" class="DatePlanPri"></many-to-one>
+		<property name="divisionId" column="divisionId"></property>
+		<property name="smpPreDictId" column="SMPREDICTID"></property>
+		<property name="upPjNum" column="upPjNum"></property>
+		<property name="score" column="SCORE"></property>
+		
+		<set name="zeroScoreSet"  inverse="false" >
+			<key column="predictid" unique="true"></key>
+			<one-to-many class="ZeroScore" />
+		</set>
+	</class>
+</hibernate-mapping>

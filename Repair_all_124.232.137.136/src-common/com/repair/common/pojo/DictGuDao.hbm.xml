@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.repair.common.pojo">
+	<class name="DictGuDao" table="DICT_GUDAO">
+		<id name="guDaoId">
+			<generator class="native" />
+		</id>
+		<property name="gdName" />
+		<property name="gdNum" />
+		<property name="twNum" />
+	</class>
+</hibernate-mapping>

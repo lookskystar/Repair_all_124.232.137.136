@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.repair.common.pojo">
+	<class name="ExaminRec" table="EXAMIN_REC">
+		<id name="id" column="ID">
+			<generator class="native" />
+		</id>
+		<many-to-one name="examiner" class="UsersPrivs" column="EXAMINER"/>
+		<many-to-one name="type" class="DictProTeam" column="TYPE"/>
+		<property name="examinDate" column="EXAMINDATE" type="string"/>
+		<property name="standExaminTime" column="STANDEXAMINTIME" type="string"/>
+		<property name="actualExaminTime" column="ACTUALEXAMINTIME" type="string"/>
+		<property name="currectPoints" column="CURRECTPOINTS" type="string"/>
+	</class>
+</hibernate-mapping>

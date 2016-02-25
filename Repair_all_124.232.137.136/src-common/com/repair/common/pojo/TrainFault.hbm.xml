@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.repair.common.pojo">
+    <class name="TrainFault" table="Train_Fault" >
+        <id name="id" type="integer">
+            <column name="TRAINID" />
+            <generator class="increment" />
+        </id>
+		<property name="jctype" column="JCTYPE"/>
+		<property name="jcnum" column="JCNUM"/>
+		<property name="locomotive" column="LOCOMOTIVE"/>
+		<property name="faultDate" column="FAULTDATE"/>
+		<property name="faultmotive" column="FAULTMOTIVE"/>
+		<property name="regDate" column="REGDATE"/>
+		<property name="register" column="REGISTER"/>
+		<property name="dealcondition" column="DEALCONDITION"/>
+		<property name="comments" column="COMMENTS"/>
+		<property name="faultCause" column="FAULTCAUSE"/>
+		<many-to-one name="jtRunKiloRec" class="JtRunKiloRec" column="RUNID"/>
+    </class>
+</hibernate-mapping>

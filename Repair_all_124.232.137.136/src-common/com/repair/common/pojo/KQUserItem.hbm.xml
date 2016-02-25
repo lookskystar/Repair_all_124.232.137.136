@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.repair.common.pojo">
+	<class name="KQUserItem" table="KQ_USER_ITEM">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<many-to-one name="item" class="KQWorkTimeItem">
+			<column name="ITEMID"></column>
+		</many-to-one>
+		<many-to-one name="proteam" class="DictProTeam">
+        	<column name="PROTEAMID"></column>
+        </many-to-one>
+        <many-to-one name="user" class="UsersPrivs">
+        	<column name="USERID"></column>
+        </many-to-one>
+		<property name="workScore" type="java.lang.Integer">
+			<column name="WORK_SCORE"></column>
+		</property>
+		<property name="workTime" type="java.lang.String">
+			<column name="WORK_TIME" />
+		</property>		
+		<property name="workNote" type="java.lang.String">
+			<column name="WORK_NOTE"></column>
+		</property>
+		<property name="status" type="java.lang.Integer">
+			<column name="STATUS" />
+		</property>		
+		<property name="signTime" type="java.lang.String">
+			<column name="SIGN_TIME"></column>
+		</property>
+        <property name="overUser" type="java.lang.Long">
+			<column name="OVER_USERID"></column>
+		</property>
+        <property name="overTime" type="java.lang.String">
+			<column name="OVER_TIME"></column>
+		</property>
+	</class>
+</hibernate-mapping>

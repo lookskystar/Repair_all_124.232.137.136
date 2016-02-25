@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd"><struts>
+	<!-- 将struts2交给spring管理-->
+	<constant name="struts.configuration.xml.reload" value="true"/>
+	<constant name="struts.action.extension" value="action,do,webwork" />
+	
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <constant name="struts.devMode" value="true" />
+	<constant name="struts.multipart.maxSize" value="100971520"></constant>
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+	<constant name="struts.objectFactory.spring.autoWire" value="name"></constant>
+	<constant name="struts.objectFactory" value="spring"></constant>
+	<constant name="struts.custom.i18n.resources" value="messages"></constant>
+	
+	<include file="strutsConfig/common.xml"></include>
+
+	<!-- 范围作业 -->
+	<include file="strutsConfig/struts-work.xml"></include>
+	
+	<!-- 交车实验 -->
+	<include file="strutsConfig/struts-experiment.xml"></include>
+	<!-- 计划管理 -->
+	<include file="strutsConfig/struts-plan.xml"></include>
+	<!-- 查询 -->
+	<include file="strutsConfig/struts-query.xml"></include>
+	<!-- 总后台 -->
+	<include file="strutsConfig/struts-admin.xml"></include>
+	<!-- 配件 -->
+	<include file="strutsConfig/struts-part.xml"></include>
+	<!-- 探伤 -->
+	<include file="strutsConfig/struts-ts.xml"></include>
+	<!-- 考勤 -->
+	<include file="strutsConfig/struts-kq.xml"></include>
+</struts>
+

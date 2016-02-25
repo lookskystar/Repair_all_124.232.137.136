@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.repair.common.pojo">
+	<class name="PJPresetRelateID" table="PJ_PRESET_RELATEID">
+		<id name="pjRelateId" column="PJRELATEID" type="java.lang.Long">
+			<generator class="increment" />
+		</id>
+		<many-to-one name="pjPresetId" column="PJPRESETID" class="PJPresetDivision"/>
+		<many-to-one name="pjFixItemId" column="PJFIXITEMID" class="PJFixItem"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="part" namespace="/" extends="common">
+	  	<!-- 
+	  	<action name="loginAction" class="loginAction">
+	  		<result name="main" type="redirect">main.jsp</result>
+	  		<result name="loginOut">login.jsp</result>
+	  	</action>
+	     -->
+	     
+	  	<action name="partFixAction" class="partFixAction">
+	  	    <result name="listPJDynamicInfo">/fix/listPJDynamicInfo.jsp</result>
+	  		<result name="pjDynamicList">/fix/pjDynamicList.jsp</result>
+	  		<result name="choicePJS">/fix/choicePJS.jsp</result>
+	  		<result name="choiceDynamicInfo">/fix/choiceDynamicInfo.jsp</result>
+	  		<result name="unfinishedPartCount">/fix/unfinishedPartCount.jsp</result>
+	  		<result name="unfinishedPart">/fix/unfinishedPart.jsp</result>
+	  		<result name="assignFixItem">/fix/assignFixItem.jsp</result>
+	  		<result name="choiceFixItem">/fix/choiceFixItem.jsp</result>
+	  		<result name="workerSign">/fix/sign/workerSign.jsp</result>
+	  		<result name="othersSign">/fix/sign/othersSign.jsp</result>
+	  		<result name="inspectionItem">/fix/sign/inspectionItem.jsp</result>
+	  		<result name="detectItem">/fix/sign/detectItem.jsp</result>
+	  		<result name="leadInspectionItem">/fix/sign/leadInspectionItem.jsp</result>
+	  		<result name="leadDetectItem">/fix/sign/leadDetectItem.jsp</result>
+	  		<result name="unitPartList">/fix/unitPartList.jsp</result>
+	  		<result name="unitChildPart">/fix/unitChildPart.jsp</result>
+	  		<result name="unitChoicePart">/fix/unitChoicePart.jsp</result>
+	  		<result name="trustFix">/fix/trustFix.jsp</result>
+	  		
+	  		<result name="approvePredictList">/predict/approvePredictList.jsp</result>
+	  		<result name="predictList">/predict/predictList.jsp</result>
+	  		<result name="choiceWorker">/predict/choiceWorker.jsp</result>
+	  		<result name="signPredictList">/predict/signPredictList.jsp</result>
+	  		<result name="bzList">/predict/bzList.jsp</result>
+	  		<result name="choicedypj">/fix/sign/choice_dypj.jsp</result>
+	  		<result name="addPJNum">/fix/sign/addPJNum.jsp</result>
+	  		<result name="pjNumUpdateInput">/fix/sign/pjnum_update_dialog.jsp</result>
+	  		<result name="preset_inspectionItem">/fix/sign/preset_inspectionItem.jsp</result>
+	  		<result name="preset_detectItem">/fix/sign/preset_detectItem.jsp</result>
+	  	</action>
+	  
+	    <!-- 配件管理 -->
+	    <action name="pjManageAction" class="pjManageAction">
+	        <result name="dyPJList">/manage/dypjlist.jsp</result>
+	        <result name="staticPJList">/manage/staticpjlist.jsp</result>
+	        <result name="addPjStaticInfo">/manage/addPjStaticInfo.jsp</result>
+	        <result name="updatePjStaticInfo">/manage/updatePjStaticInfo.jsp</result>
+	        <result name="addPjDyInfo">/manage/addPjDyInfo.jsp</result>
+	        <result name="updatePjDyInfo">/manage/updatePjDyInfo.jsp</result>
+	        <result name="handoverRecord">/manage/HandoverRecord.jsp</result>
+	        <result name="dynamicHandover">/manage/dypjlistHandover.jsp</result>
+	        <result name="pjRecorder">/manage/pjrecorder.jsp</result>
+	        <result name="pjDetailRecorder">/manage/pjdetailrecorder.jsp</result>
+	        <result name="choiceWzNum">/manage/choiceWzNum.jsp</result>
+	        <result name="inputPartRecord">/manage/pjrecordlist.jsp</result>
+	        <result name="exchangeTipsList">/manage/exchange_listofgeton.jsp</result>
+	        <result name="exchangeTipsAdd">/manage/exchange_tipofgeton.jsp</result>
+	        <result name="exchangeTipsOfStore">/manage/exchange_tipofstore.jsp</result>
+	        <result name="addvanceTipsList">/manage/addvance_list.jsp</result>
+	        <result name="addvanceTipsAdd">/manage/addvance_tips.jsp</result>
+	        <result name="choiceAddvanceTipsList">/manage/choice_addvance_list.jsp</result>
+	        <result name="storeInputTipsList">/manage/storeinput_list.jsp</result>
+	        <result name="storeCountList">/manage/store_count_list.jsp</result>
+	        <result name="storeCountDetail">/manage/store_count_detail.jsp</result>
+	         <result name="dyPJListInput" type="redirectAction">
+	         	<param name="actionName">pjManageAction!dyPJListInput</param>
+	         	<param name="jcsType">${jcsType}</param>
+	         	<param name="pjName">${pjName}</param>
+	         </result>
+	    </action>
+	  <!-- 
+	  	<action name="partManageAction" class="partManageAction">
+	  		<result name="jcfixrec">/part/manage/jcfixrec.jsp</result>
+	  		<result name="dateplanlist">/part/manage/dateplanlist.jsp</result>
+	  		<result name="index">/rec/index.jsp</result>
+	  		<result name="over">/rec/over.jsp</result>
+	  	</action> 
+	  	 -->
+	  	 
+	</package>
+</struts>

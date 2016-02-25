@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="work" extends="common" namespace="/">
+		<action name="loginAction" class="loginAction">
+	  		<result name="main" type="redirect">main.jsp</result>
+	  		<result name="loginOut" type="redirect">login.jsp</result>
+	  		<result name="lead_main" type="redirect">report/lead_main.jsp</result>
+	  		<result name="jcgz_main" type="redirect">report/jcgz_main.jsp</result>
+	  		<result name="pj_main" type="redirect">pj_main.jsp</result>
+	  		<result name="ajaxLoginInput">/experiment/ajaxLoginInput.jsp</result>
+	  		<result name="count">query!groupLeaderReport.do</result>
+	  		<result name="z_left">z_left.jsp</result>
+	  	</action>
+	  	
+	  	<action name="presetDivisionAction" class="presetDivisionAction">
+			<result name="presetDivision">work/preset/presetDivision.jsp</result>
+			<result name="zx_presetDivision">work/preset/zx_presetDivision.jsp</result>
+			<result name="addPressetDivision">work/preset/addPressetDivision.jsp</result>
+			<result name="zx_addPressetDivision">work/preset/zx_addPressetDivision.jsp</result>
+			<result name="updatePressetDivision">work/preset/updatePressetDivision.jsp</result>
+		    <result name="zx_updatePressetDivision">work/preset/zx_updatePressetDivision.jsp</result>
+			<result name="techDivisionInput">work/preset/tech_division_work.jsp</result>
+			<result name="teamItems">work/preset/team_items.jsp</result>
+			<result name="techDivisionJcInput">work/preset/tech_division_jc.jsp</result>
+			<result name="pj_presetDivision">work/preset/pj_presetDivision.jsp</result>
+			<result name="pj_addPressetDivision">work/preset/pj_addPressetDivision.jsp</result>
+			<result name="pj_updatePressetDivision">work/preset/pj_updatePressetDivision.jsp</result>
+		</action>
+	  	
+	  	<action name="signWorkAction" class="signWorkAction">
+		    <result name="jclist">work/sign/jclist.jsp</result>
+		    <result name="gz_itemlist">work/sign/gz_itemlist.jsp</result>
+		    <result name="zj_itemlist">work/sign/zj_itemlist.jsp</result>
+		    <result name="js_itemlist">work/sign/js_itemlist.jsp</result>
+		    <result name="ys_itemlist">work/sign/ys_itemlist.jsp</result>
+		    <result name="jcgz_itemlist">work/sign/jcgz_itemlist.jsp</result>
+		    <result name="zx_gz_itemlist">work/sign/zx_gz_itemlist.jsp</result>
+		    <result name="zx_zj_itemlist">work/sign/zx_zj_itemlist.jsp</result>
+		    <result name="zx_js_itemlist">work/sign/zx_js_itemlist.jsp</result>
+		    <result name="zx_ys_itemlist">work/sign/zx_ys_itemlist.jsp</result>
+		    <result name="zx_jcgz_itemlist">work/sign/zx_jcgz_itemlist.jsp</result>
+		    <result name="sign_dialog">work/sign/sign_dialog.jsp</result>
+		</action>
+		
+		<action name="workAction" class="workAction">
+			<result name="jclist">work/work/jclist.jsp</result>
+			<result name="itemlist">work/work/itemlist.jsp</result>
+			<result name="division_list">work/work/division_list.jsp</result>
+			<result name="receive_work">work/role/receive_work.jsp</result>
+			<result name="worker_ratify">work/work/worker_ratify.jsp</result>
+			<result name="zx_worker_ratify">work/work/zx_worker_ratify.jsp</result>
+			<result name="check_item">work/work/check_item.jsp</result>
+			<result name="test_item">work/work/test_item.jsp</result>
+			<result name="zx_check_item">work/work/zx_check_item.jsp</result>
+			<result name="zx_test_item">work/work/zx_test_item.jsp</result>
+			<result name="ratify_dialog">work/work/ratify_dialog.jsp</result>
+			<result name="zx_ratify_dialog">work/work/zx_ratify_dialog.jsp</result>
+			<result name="pjNumInput">work/work/pjnum_dialog.jsp</result>
+			<result name="pjNumUpdateInput">work/work/pjnum_update_dialog.jsp</result>
+			<result name="pjNumXXInput">work/work/pjnum_xx_dialog.jsp</result>
+			<result name="pjNumUpdateXXInput">work/work/pjnum_update_xx_dialog.jsp</result>
+			<result name="jcitemList">work/work/jcsy_item.jsp</result>
+			<result name="jcitemzjjsList">work/sign/jcsyzjjs_itemlist.jsp</result>
+			<result name="jcitemysList">work/sign/jcsyys_itemlist.jsp</result>
+			<result name="choicedypj">work/work/choice_dypj.jsp</result>
+			<result name="pjRecorder">work/work/pjrecorder.jsp</result>
+			<result name="pjDetailRecorder">work/work/pjdetailrecorder.jsp</result>
+			<result name="choicedypjupdate">work/work/choice_dypj_update.jsp</result>
+			<!-- 2015-5-22，黄亮，添加新页面， 报活流程中，选择配件页面 -->
+			<result name="choiceDypjUpdateReport">work/work/choice_dypj_update_report.jsp</result>
+
+			
+		</action>
+	  	
+	  	<action name="reportWorkManage" class="reportWorkManageAction">
+	  		<interceptor-ref name="fileUpload">  
+               <!-- 配置允许上传的文件类型，多个用","分隔 -->  
+               <param name="allowedTypes">image/bmp,image/png,image/gif,image/jpeg,image/jpg,image/x-png, image/pjpeg</param>  
+            </interceptor-ref>  
+            <interceptor-ref name="defaultStack" />  
+             <!-- 动态设置Action中的savePath属性的值 -->  
+            <param name="savePath">reportwork</param>
+	  		<result name="reportwork">/page/reportwork/reportwork.jsp</result>
+	  		<result name="jtpredictinput">/page/reportwork/reportworkoperate.jsp</result>
+	  		<result name="reportworkdetail">/page/reportwork/reportworkdetails.jsp</result>
+	  		<result name="reportworkdistribution">/page/reportwork/reportworkdistribution.jsp</result>
+	  		<result name="distributioninput">/page/reportwork/divisionofwork.jsp</result>
+	  		<result name="reportworksign">/page/reportwork/reportworksign.jsp</result>
+	  		<result name="receive_report_work">/work/role/receive_report_work.jsp</result>
+	  		<result name="reportworksignitem">/page/reportwork/reportworksignitem.jsp</result>
+	  		<result name="qitech_reportworksignitem">/page/reportwork/qitech_reportworksignitem.jsp</result>
+	  		<result name="reportworkitemsigninput">/page/reportwork/sign.jsp</result>
+	  		<result name="distributiondispatchinginput">/page/reportwork/dispatching.jsp</result>
+	  		<result name="jtPreDictUpdateInput">/page/reportwork/reportworkupdate.jsp</result>
+	  		<result name="listDictFailure">reportWorkManage!dictFailureList.action</result>
+	  		<result name="dictFailureList">/page/reportwork/dictfailurelist.jsp</result>
+	  		<result name="dictFailureAddInput">/page/reportwork/dictfailureaddinput.jsp</result>
+	  		<result name="dictFailureEditeInput">/page/reportwork/dictfailureediteinput.jsp</result>
+	  		<result name="reportworkoperate">/page/reportwork/reportworkoperate.jsp</result>
+	  		<result name="re_sign">/page/reportwork/re_sign.jsp</result>
+	  		<result name="lead_re_sign">/page/reportwork/lead_re_sign.jsp</result>
+	  	</action>
+	  	
+	  	<action name="oilAssay" class="oilAssayAction">
+	  	    <result name="oilAssayInput">work/oil/oil_assay.jsp</result>
+	  	    <result name="addOilRecorderDialog">work/oil/add_oil_dialog.jsp</result>
+	  	    <result name="updateOilRecorderDialog">work/oil/update_oil_dialog.jsp</result>
+	  	    <result name="oilAssayitemInput">work/oil/oil_assay_item.jsp</result>
+	  	    <result name="oilSubItemInput">work/oil/oil_assay_subitem.jsp</result>
+	  	    <result name="fillValueInputDialog">work/oil/fill_value_dialog.jsp</result>
+	  	    <result name="searchOilRecorder">work/oil/search_oil_recorder.jsp</result>
+	  	</action>
+	</package>
+	
+	<package name="qz" extends="common" namespace="/">
+		
+	  	<action name="qz" class="com.repair.work.action.QZAction">
+	  		<result name="listZeroPreDict">/work/qz/qz_zeroScore.jsp</result>
+	  		<result name="statistics">/work/qz/qz_qzStatistics.jsp</result>
+	  		 	<!-- 油水试验记录表数据查询 -->
+			<result name="findOilAssayPriRecorder">work/qz/selectOil.jsp</result>
+	  	    <!-- 油水试验详细记录查询 -->
+	  	    <result name="findOilAssayByRjhId">work/qz/oilAssay.jsp</result>
+	  	</action>
+	</package>
+</struts>

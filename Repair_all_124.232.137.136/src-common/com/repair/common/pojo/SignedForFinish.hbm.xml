@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.repair.common.pojo">
+	<class name="SignedForFinish" table="SIGNEDFORFINISH">
+		<id name="jgId">
+			<generator class="native" />
+		</id>
+		<property name="dpId"/>
+		<property name="jclx"/>
+		<property name="jch" />
+		<property name="xcxc" />
+		<property name="kssj" />
+		<property name="jssj" />
+		<property name="jcgzid" />
+		<property name="jcgzxm" />
+		<property name="jxzrid" />
+		<property name="jxzrxm" />
+		<property name="ysyid" />
+		<property name="ysyxm" />
+		<property name="dzid" />
+		<property name="dzxm" />
+		<property name="type" />
+		<property name="blongArea" />
+		<property name="fixArea" />
+		<property name="reason"/>
+	</class>
+</hibernate-mapping>

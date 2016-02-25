@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.repair.common.pojo">
+	<class name="DatePlanPri" table="DATEPLAN_PRI">
+		<id name="rjhmId">
+			<generator class="native" />
+		</id>
+		<property name="jcType" />
+		<property name="jcnum" />
+		<property name="fixFreque" />
+		<property name="kcsj" />
+		<property name="jhqjsj" />
+		<property name="sjqjsj" />
+		<property name="jhjcsj" />
+		<property name="sjjcsj" />
+		<many-to-one name="gongZhang" class="UsersPrivs"/>
+		<many-to-one name="zhiJian" class="UsersPrivs"/>
+		<many-to-one name="jiShu" class="UsersPrivs"/>
+		<many-to-one name="yanShou" class="UsersPrivs"/>
+		<property name="planStatue" />
+		<property name="gdh" />
+		<property name="twh" />
+		<property name="zdr" />
+		<property name="zdsj" />
+		<property name="comments" />
+		<property name="proteamId" column="BANZU"/>
+		<property name="workTeam" column="WORKTEAM"/>
+		<many-to-one name="nodeid" class="JCFixflow"/>
+		<property name="projectType"></property>
+		<set name="jcQzZlPdSet" inverse="true" >
+			<key column="rjhmid"></key>
+			<one-to-many class="JcQzZlPd"/>
+		</set>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.repair.common.pojo">
+	<class name="JCQZFixRec" table="JC_QZ_FIXREC">
+		<id name="jcRecId">
+			<column name="JCRECID"></column>
+			<generator class="native" />
+		</id>
+		<property name="jwdCode" column="JWDCODE"/>
+		<property name="wekprecid" column="WEKPRECID"/>
+		<many-to-one name="pjStaticInfo" class="PJStaticInfo" column="PJSID"></many-to-one>
+		<property name="jcid" column="JCID"/>
+		<property name="doPjBarcode" column="DOPJBARCODE"/>
+		<property name="downPjNum" column="DOWNPJNUM"/>
+		<property name="upPjBarcode" column="UPPJBARCODE"/>
+		<property name="upPjNum" column="UPPJNUM"/>
+		<many-to-one name="items" class="JCQZItems" column="THIRDUNITID"></many-to-one>
+		<property name="itemName" column="ITEMNAME"/>
+		<property name="pjName" column="PJNAME"/>
+		<property name="leftMargin" column="LEFTMARGIN"/>
+		<property name="rightMargin" column="RIGHTMARGIN"/>
+		<property name="fixSituation" column="FIXSITUATION"/>
+		<property name="workerId" column="WORKERID"/>
+		<property name="workerName" column="WORKERNAME"/>
+		<property name="fixEmp" column="FIXEMP"/>
+		<property name="empAfformTime" column="EMPAFFIRMTIME"/>
+		<property name="lead" column="LEAD"/>
+		<property name="leadName" column="LEADNAME"/>
+		<property name="ldAffirmTime" column="LDAFFIRMTIME"/>
+		<property name="commitLead" column="COMMITLEAD"/>
+		<property name="comLdAffiTime" column="COMLDAFFITIME"/>
+		<property name="qi" column="QI"/>
+		<property name="qiAffiTime" column="QIAFFITIME"/>
+		<property name="tech" column="TECH"></property>
+		<property name="techAffiTime" column="TECHAFFITIME"></property>
+		<property name="accepter" column="ACCEPTER"/>
+		<property name="acceAffiTime" column="ACCEAFFITIME"/>
+		<property name="recStas" column="RECSTAS"/>
+		<many-to-one name="jcRecmId" column="JCRECMID" class="DatePlanPri"></many-to-one>
+		<property name="bzId" column="BZID"/>
+		<property name="moren" column="MOREN"/>
+		<property name="bbrw" column="BBRW"/>
+		<property name="bbrwAffiTime" column="BBRWAFFITIME"/>
+		<property name="jxzr" column="JXZR"/>
+		<property name="jxzrAffiTime" column="JXZRAFFITIME"/>
+		<property name="zjkz" column="ZJKZ"/>
+		<property name="zjkzAffiTime" column="ZJKZAFFITIME"/>
+		<property name="jskz" column="JSKZ"/>
+		<property name="jskzAffiTime" column="JSKZAFFITIME"/>
+		<property name="dld" column="DLD"/>
+		<property name="dldAffiTime" column="DLDAFFITIME"/>
+		<property name="itemType" column="ITEMTYPE"></property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.repair.common.pojo">
+	<class name="DlJcJyMxb" table="DLJCJYMXB">
+		<id name="jymxId">
+			<generator class="native" />
+		</id>
+		<many-to-one name="jyzId" />
+		<property name="jcxm" />
+		<property name="jcqk" />
+		<property name="jcgz" />
+		<property name="zj" />
+		<property name="ys" />
+		<property name="jcgzxm" />
+		<property name="zjxm" />
+		<property name="ysxm" />
+		<property name="status" />
+		<property name="fixEmp" />
+		<property name="jcpy" />
+		<property name="zjQrTime" />
+		<property name="ysQrTime" />
+	</class>
+</hibernate-mapping>

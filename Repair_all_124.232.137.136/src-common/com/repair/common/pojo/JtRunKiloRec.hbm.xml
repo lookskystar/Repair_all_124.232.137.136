@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.repair.common.pojo">
+	<class name="JtRunKiloRec" table="JT_RUNKILOREC">
+		<id name="runId">
+			<generator class="native" />
+		</id>
+		<property name="jwdCode"/>
+		<property name="nowDate"/>
+		<property name="jcType" />
+		<property name="jcNum" />
+		<property name="dayRunKilo" />
+		<property name="minorRunKilo" />
+		<property name="smaRunKilo" />
+		<property name="midRunKilo" />
+		<property name="larRunKilo" />
+		<property name="totalRunKilo" />
+		<property name="registRant" />
+		<property name="registTime" />
+		<property name="vary" />
+	</class>
+</hibernate-mapping>

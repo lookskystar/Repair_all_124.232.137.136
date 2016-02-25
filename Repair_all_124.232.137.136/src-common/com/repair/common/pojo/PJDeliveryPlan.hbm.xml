@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.repair.common.pojo.PJDeliveryPlan" table="PJ_DELIVERYPLAN">
+        <id name="pjdeliid" type="java.lang.Long">
+            <column name="PJDELIID" />
+            <generator class="increment" />
+        </id>
+        <property name="downpjbarcode" type="java.lang.String">
+            <column name="DOWNPJBARCODE" length="50" />
+        </property>
+        <property name="pjname" type="java.lang.String">
+            <column name="PJNAME" length="50" />
+        </property>
+        <property name="downpjfacnum" type="java.lang.String">
+            <column name="DOWNPJFACNUM" length="50"/>
+        </property>
+        <property name="uppjbarcode" type="java.lang.String">
+            <column name="UPPJBARCODE" length="50"  />
+        </property>
+        <property name="uppjfacnum" type="java.lang.String">
+            <column name="UPPJFACNUM" length="50" />
+        </property>
+        <property name="comunitpeo" type="java.lang.String">
+            <column name="COMUNITPEO" length="20"  />
+        </property>
+        <property name="comtime" type="java.util.Date">
+            <column name="COMTIME" length="7"  />
+        </property>
+        <property name="receiptpeo" type="java.lang.String">
+            <column name="RECEIPTPEO" length="20"  />
+        </property>
+        <property name="receunittime" type="java.util.Date">
+            <column name="RECEUNITTIME" length="7"/>
+        </property>
+        <property name="planstas" type="java.lang.Integer">
+            <column name="PLANSTAS" precision="22" scale="0"  />
+        </property>
+        
+        <!-- define relation many-to-one 
+
+        <many-to-one name="pJStaticInfoS" class="com.repair.common.pojo.PJStaticInfo" lazy="false">
+            <column name="SCPJID" />
+        </many-to-one>
+         -->
+
+
+        <many-to-one name="pJStaticInfoX" class="com.repair.common.pojo.PJStaticInfo" lazy="false">
+            <column name="XCPJID" />
+        </many-to-one>
+
+        <many-to-one name="datePlan" class="com.repair.common.pojo.DatePlanPri">
+        	<column name="DATEPLANID"></column>
+        </many-to-one>
+        
+        
+        
+        
+    </class>
+</hibernate-mapping>

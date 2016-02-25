@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.repair.common.pojo">
+    <class name="PJUnitPart" table="PJ_UNITPART">
+        <id name="upId" type="java.lang.Long">
+            <column name="UPID" />
+            <generator class="increment" />
+        </id>
+        <property name="childFacNum" type="java.lang.String"></property>
+       	
+       	<many-to-one name="datePlan" class="PJDatePlan">
+       		<column name="planId"></column>
+       	</many-to-one>
+        <many-to-one name="parentPJ" class="PJDynamicInfo">
+        	<column name="parentId"></column>
+        </many-to-one>
+        <many-to-one name="childPJ" class="PJDynamicInfo">
+        	<column name="childId"></column>
+        </many-to-one>
+        <many-to-one name="user" class="UsersPrivs">
+        	<column name="userid"></column>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.repair.common.pojo">
+	<class name="AttendanceDate" table="ATTENDANCE_DATE">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<many-to-one name="users" column="USERS" class="UsersPrivs" />
+		<many-to-one name="bzid" column="BZID" class="DictProTeam" />
+		<property name="datetime" column="DATETIME" type="string"/>
+		<property name="comments" column="COMMENTS" type="string"/>
+		<property name="confirm" column="CONFIRM" type="string"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="ts" extends="common" namespace="/">
+		<action name="tsAction" class="tsAction">
+			<result name="inputDepot">ts/tsbh/depot.jsp</result>
+			<result name="inputDepotList">ts/tsgl/depotlist.jsp</result>
+			<result name="inputPaiGong">/ts/tsgl/paigong.jsp</result>
+			<result name="inputRecord">ts/tsgl/record.jsp</result>	
+			<result name="inputRecordFill">/ts/tsgl/recordfill.jsp</result>	
+			<result name="inputRecordList">ts/tsgl/recordlist.jsp</result>	
+			<result name="inputDetails">ts/tsgl/recorddetails.jsp</result>
+		</action>
+	</package>
+</struts>

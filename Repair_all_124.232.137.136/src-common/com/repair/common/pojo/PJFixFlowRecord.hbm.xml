@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.repair.common.pojo">
+    <class name="PJFixFlowRecord" table="PJ_FIXFLOWRECORD">
+        <id name="recId" type="java.lang.Long">
+            <column name="RECID" />
+            <generator class="increment" />
+        </id>
+        <property name="jwdCode"></property>
+        <property name="status" not-null="true"></property>
+	
+		<many-to-one name="pjFixFlow" class="PJFixFlow">
+			<column name="NODEID"></column>
+		</many-to-one>
+		<many-to-one name="team" class="DictProTeam">
+			<column name="PROTEAMID"></column>
+		</many-to-one>
+		<many-to-one name="datePlan" class="PJDatePlan">
+			<column name="planId"></column>
+		</many-to-one>
+		<many-to-one name="pjDynamicInfo" class="PJDynamicInfo">
+			<column name="PJDID"></column>
+		</many-to-one>
+
+    </class>
+</hibernate-mapping>
